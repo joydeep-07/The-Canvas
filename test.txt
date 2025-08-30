@@ -1,0 +1,99 @@
+import React from "react";
+import me from '../assets/full.jpg'
+const qualifications = [
+  {
+    title: "Class 10 (Secondary Education)",
+    institution: "BB School, Asansol",
+    year: "2016 - 2017",
+    description:
+      "Completed secondary school education with a focus on science and mathematics. Achieved strong foundational knowledge in subjects like Physics, Chemistry, Mathematics, and Computer Science, preparing for higher studies in computer applications.",
+  },
+  {
+    title: "Class 12 (Higher Secondary Education)",
+    institution: "BB College, Asansol",
+    year: "2018 - 2020",
+    description:
+      "Completed higher secondary education with specialization in Computer Science and Mathematics. Developed analytical and problem-solving skills, laying the groundwork for pursuing a Bachelor of Computer Applications (BCA).",
+  },
+  {
+    title: "Bachelor of Computer Applications (BCA)",
+    institution: "BB College, Asansol",
+    year: "2020 - 2023",
+    description:
+      "Completed a rigorous undergraduate program focusing on programming, software development, database management, and computer networks. Developed multiple projects using C, C++, Java, and Web technologies including HTML, CSS, and JavaScript. Gained strong foundation in algorithms, data structures, and problem-solving techniques, preparing for advanced studies and real-world software development.",
+  },
+  {
+    title: "Master of Computer Applications (MCA)",
+    institution: "Asansol Engineering College",
+    year: "2023 - 2025",
+    description:
+      "Pursuing an advanced program in computer applications with specialization in MERN stack development, cloud computing, and modern software architectures. Engaged in practical projects involving real-time applications, REST APIs, and full-stack development. Strengthening skills in React, Node.js, Express, MongoDB, and DevOps practices to build scalable and high-performance applications.",
+  },
+  {
+    title: "Full Stack Web Development Certification",
+    institution: "Online Learning Platform",
+    year: "2022",
+    description:
+      "Completed a comprehensive certification program covering front-end and back-end technologies. Learned to build dynamic and responsive web applications with a focus on user experience, security, and performance. Gained hands-on experience in React, Node.js, Express, MongoDB, API integration, version control, and deployment strategies for modern web projects.",
+  },
+  {
+    title: "Advanced Data Structures and Algorithms",
+    institution: "Online Course",
+    year: "2021",
+    description:
+      "Studied advanced data structures such as trees, graphs, heaps, and hash tables, along with algorithmic techniques like dynamic programming, greedy algorithms, and graph traversal methods. Applied concepts to solve complex computational problems efficiently, enhancing problem-solving abilities and coding proficiency.",
+  },
+];
+
+
+const Qualification = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-gray-200 to-neutral-200 flex flex-col items-center px-15">
+      <h1 className="text-4xl font-bold text-gray-800 mb-4">
+        My Qualifications
+      </h1>
+      <p className="text-lg text-gray-600 italic mb-16">
+        "Education is the passport to the future, for tomorrow belongs to those
+        who prepare for it today."
+      </p>
+
+      <div className="flex px-2 w-full max-w-8xl gap-10">
+        {/* Cards */}
+        <div className="flex flex-col w-full md:w-2/3">
+          {qualifications.map((qual, index) => (
+            <div
+              key={index}
+              className="px-4 py-5 flex flex-col md:flex-row items-start md:items-center justify-between transition-transform"
+            >
+              <div className="md:w-full">
+                <h2 className="text-2xl font-semibold text-sky-600">
+                  {qual.title}
+                </h2>
+                <p className="text-gray-700 mt-2">
+                  {qual.institution}{" "}
+                  <span className="text-sm text-gray-600">{qual.year}</span>
+                </p>
+                <p className="text-gray-700 max-w-4xl mt-4">
+                  {qual.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Sticky Image */}
+        <div className="hidden md:block md:w-1/3">
+          <div className="sticky top-20">
+            <img
+              src={me}
+              alt="Qualification"
+              className="rounded-xl h-[89vh] shadow-xl"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Qualification;
