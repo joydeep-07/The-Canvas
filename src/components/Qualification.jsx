@@ -1,18 +1,19 @@
 import React, { useEffect } from "react";
 import me from "../assets/full.jpg";
+// import me from "../assets/zudio.jpg";
 import qualifications from "../Data/qualification.js";
 import AboutMe from "./AboutMe.jsx";
 import "aos/dist/aos.css";
 import Aos from "aos";
-import "../index.css"; // Make sure this is imported
+import "../index.css"; 
 
 const Qualification = () => {
   useEffect(() => {
     Aos.init({
-      duration: 700, // smooth animation
-      easing: "ease-in-out", // premium easing
-      once: true, // animate once
-      offset: 100, // trigger offset
+      duration: 700, 
+      easing: "ease-in-out",
+      once: true, 
+      offset: 100, 
     });
   }, []);
 
