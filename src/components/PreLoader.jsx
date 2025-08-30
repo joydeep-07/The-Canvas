@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 
 const PreLoader = () => {
   const canvasRef = useRef(null);
+  const progressBarRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -65,18 +66,15 @@ const PreLoader = () => {
       });
 
       const draw = () => {
-        
         const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
         gradient.addColorStop(0, "#87CEEB"); // Sky blue
         gradient.addColorStop(1, "#FFFFFF"); // White
 
-        
         ctx.fillStyle = gradient;
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-        // Draw the text
         letterObjects.forEach((obj) => {
-          ctx.fillStyle = `rgba(255, 255, 255, ${obj.alpha})`; 
+          ctx.fillStyle = `rgba(255, 255, 255, ${obj.alpha})`;
           ctx.font = `bold ${fontSize}px sans-serif`;
           ctx.textAlign = "center";
           ctx.textBaseline = "middle";
@@ -87,6 +85,12 @@ const PreLoader = () => {
       };
 
       draw();
+
+      gsap.to(progressBarRef.current, {
+        width: "100%",
+        duration: 3, 
+        ease: "power2.inOut",
+      });
     };
 
     handleResize();
@@ -98,18 +102,28 @@ const PreLoader = () => {
   }, [isMobile]);
 
   return (
-    <>
-      <canvas
-        ref={canvasRef}
-        className="w-screen h-screen block"
-        style={{
-          width: "100vw",
-          height: "100vh",
-          maxWidth: "100%",
-          overflow: "hidden",
-        }}
-      />
-    </>
+    <div
+      className="flex flex-col items-center justify-center relative w-screen h-screen"
+      style={{
+        width: "100vw",
+        height: "100vh",
+        maxWidth: "100%",
+        overflow: "hidden",
+      }}
+    >
+      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
+      <div className="absolute top-1/2 mt-[50px] text-md font-medium animate-pulse text-black text-center uppercase tracking-widest">
+        LOADING PLEASE WAIT...
+      </div>
+      {/* Progress Bar */}
+      <div className="absolute top-3/5 w-3/4 bg-gray-100 h-[1.5px] rounded-full max-w-sm overflow-hidden">
+        <div
+          ref={progressBarRef}
+          className="h-[1.5px] w-[300px] bg-gray-700 rounded-full"
+          style={{ width: "0%" }}
+        ></div>
+      </div>
+    </div>
   );
 };
 
