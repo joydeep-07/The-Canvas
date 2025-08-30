@@ -7,10 +7,10 @@ import "aos/dist/aos.css";
 const Projects = () => {
   useEffect(() => {
     Aos.init({
-      duration: 700, // smooth animation
-      easing: "ease-in-out", // premium easing
-      once: true, // animate once
-      offset: 100, // trigger offset
+      duration: 700, 
+      easing: "ease-in-out",
+      once: true, 
+      offset: 100,
     });
   }, []);
 
