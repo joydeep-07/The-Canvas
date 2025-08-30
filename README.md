@@ -1,12 +1,24 @@
-# React + Vite
+# THE CANVAS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal **portfolio website** built using **React**, **Tailwind CSS**, **JavaScript**, and **GSAP** for animations. It showcases my projects, skills, qualifications, and experience as a web developer.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **Responsive Design**: Optimized for desktop, tablet, and mobile screens using Tailwind CSS.
+- **Smooth Animations**: Implemented with GSAP for engaging page transitions and interactive elements.
+- **Projects Showcase**: Displays all major projects with descriptions and links.
+- **Skills & Experience**: Highlights technical skills and professional experience.
+- **Contact Section**: Easy to reach out via email or social links.
+- **Preloader**: Custom loading animation for better user experience.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Technologies Used
+
+- **React.js** – Frontend library for building UI.
+- **Tailwind CSS** – Utility-first CSS framework for styling.
+- **JavaScript (ES6+)** – Core programming logic.
+- **GSAP (GreenSock Animation Platform)** – For smooth and advanced animations.
+- **React Icons / Lucide Icons** – For icons and UI embellishments.
