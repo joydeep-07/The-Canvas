@@ -1,19 +1,20 @@
 import React, { useEffect } from "react";
-import me from "../assets/full.jpg";
-// import me from "../assets/zudio.jpg";
+import img1 from "../assets/full.jpg";
+import img2 from "../assets/zudio.jpg";
 import qualifications from "../Data/qualification.js";
 import AboutMe from "./AboutMe.jsx";
 import "aos/dist/aos.css";
 import Aos from "aos";
-import "../index.css"; 
+import "../index.css";
+import ScratchCard from "./ScratchCard.jsx"; // ✅ import ScratchCard
 
 const Qualification = () => {
   useEffect(() => {
     Aos.init({
-      duration: 700, 
+      duration: 700,
       easing: "ease-in-out",
-      once: true, 
-      offset: 100, 
+      once: true,
+      offset: 100,
     });
   }, []);
 
@@ -54,7 +55,7 @@ const Qualification = () => {
           {/* Inner White Circle to mask spinning */}
           <div className="relative rounded-full p-[4px]">
             <img
-              src={me}
+              src={img1}
               loading="lazy"
               alt="Qualification"
               className="rounded-full shadow-xl h-36 w-36 sm:h-44 sm:w-44 object-cover"
@@ -102,14 +103,9 @@ const Qualification = () => {
         {/* Sticky Image for Desktop */}
         <div className="hidden md:block md:w-1/3">
           <div className="sticky top-20">
-            <img
-              data-aos="fade-up"
-              data-aos-delay="400"
-              src={me}
-              loading="lazy"
-              alt="Qualification"
-              className="rounded-xl h-[89vh] shadow-md"
-            />
+            <div className="rounded-xl h-[89vh]  overflow-hidden flex justify-center items-center">
+              <ScratchCard image1={img1} image2={img2} brushSize={60} />
+            </div>
           </div>
         </div>
       </div>
