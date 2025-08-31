@@ -1,5 +1,13 @@
 const projects = [
   {
+    id: 0,
+    name: "Code Canvas",
+    description:
+      "An immersive portfolio website showcasing my skills and projects with smooth animations and interactive design.",
+    technologies: ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
+    link: "https://codecanvas-cv.netlify.app/",
+  },
+  {
     id: 1,
     name: "LightLoom",
     description:
