@@ -15,7 +15,7 @@ const ScratchCard = ({ image1, image2, brushSize = 30 }) => {
     const img1 = new Image();
     img1.src = image1;
     img1.onload = () => {
-      // ✅ scale image to fit 89vh
+
       const targetHeight = window.innerHeight * 0.89;
       const aspectRatio = img1.width / img1.height;
       const scaledWidth = targetHeight * aspectRatio;

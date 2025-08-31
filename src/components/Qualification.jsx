@@ -104,7 +104,7 @@ const Qualification = () => {
         <div className="hidden md:block md:w-1/3">
           <div className="sticky top-20">
             <div className="rounded-xl h-[89vh]  overflow-hidden flex justify-center items-center">
-              <ScratchCard image1={img1} image2={img2} brushSize={60} />
+              <ScratchCard image1={img1} image2={img2} brushSize={70} />
             </div>
           </div>
         </div>
