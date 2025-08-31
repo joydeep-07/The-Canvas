@@ -2,12 +2,25 @@ import React from "react";
 import * as Icons from "lucide-react";
 import skills from "../Data/skills.js";
 import { Mail, Phone } from "lucide-react";
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaTwitter,
+  FaInstagram,
+  FaArrowDown,
+} from "react-icons/fa";
 
 const AboutMe = () => {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "../Resume.pdf";
+    link.download = "Joydeep_Paul_Resume.pdf";
+    link.click();
+  };
+
   return (
     <div id="about" className="px-2 bg-white sm:px-6 md:px-0">
-      <div className="pb-10 lg:col-span-2">
+      <div className=" lg:col-span-2">
         {/* Name */}
         <h3 className="text-xl sm:text-2xl text-black font-bold text-center  md:text-left">
           JOYDEEP PAUL
@@ -45,13 +58,13 @@ const AboutMe = () => {
         {/* Contact Info */}
         <div className="flex flex-wrap justify-start pt-3 gap-2 sm:gap-3">
           {/* Email */}
-          <span className="flex items-center gap-2 cursor-pointer px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm font-mono">
+          <span className="flex items-center gap-2 cursor-pointer px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm">
             <Mail size={16} />
             joydeeprnp8821@gmail.com
           </span>
 
           {/* Phone */}
-          <span className="flex items-center gap-2 cursor-pointer px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm font-mono">
+          <span className="flex items-center gap-2 cursor-pointer px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm ">
             <Phone size={16} />
             9635172639
           </span>
@@ -61,7 +74,7 @@ const AboutMe = () => {
             href="https://www.linkedin.com/in/joydeep-paul-06b37926a/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm font-mono transition"
+            className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm transition"
           >
             <FaLinkedin size={16} />
             LinkedIn
@@ -72,7 +85,7 @@ const AboutMe = () => {
             href="https://github.com/joydeep-07"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm font-mono transition"
+            className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm transition"
           >
             <FaGithub size={16} />
             GitHub
@@ -83,7 +96,7 @@ const AboutMe = () => {
             href="https://x.com/Paul__here?t=2fFjvZ-b0vCsuhrg2oOpEQ&s=09"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm font-mono transition"
+            className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm transition"
           >
             <FaTwitter size={16} />
             Twitter
@@ -94,7 +107,7 @@ const AboutMe = () => {
             href="https://www.instagram.com/mr.paul_16?igsh=dWhrOW1oYzdzZmlj"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm font-mono transition"
+            className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm transition"
           >
             <FaInstagram size={16} />
             Instagram
@@ -117,7 +130,7 @@ const AboutMe = () => {
               return (
                 <span
                   key={skill.id}
-                  className="flex items-center gap-2 cursor-pointer px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm font-mono transition"
+                  className="flex items-center gap-2 cursor-pointer px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm transition"
                 >
                   {IconComponent && <IconComponent size={14} />}
                   {skill.name}
@@ -125,6 +138,22 @@ const AboutMe = () => {
               );
             })}
           </div>
+        </div>
+
+        <div>
+          <h3 className="text-xl sm:text-2xl mt-6 text-black font-bold text-left">
+            DOWNLOAD RESUME
+          </h3>
+
+          <p className="text-sky-600 font-mono text-xs sm:text-sm mb-4 text-left">
+            CLICK THE BUTTON TO DOWNLOAD MY RESUME
+          </p>
+          <button
+            className="flex items-center gap-2 px-3 sm:px-4 py-2 bg-emerald-100 text-emerald-700 border border-emerald-400 rounded-full text-xs sm:text-sm transition"
+            onClick={handleDownload}
+          >
+            <FaArrowDown /> Download
+          </button>
         </div>
       </div>
     </div>
