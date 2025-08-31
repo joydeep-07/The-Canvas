@@ -6,9 +6,10 @@ import AboutMe from "./AboutMe.jsx";
 import "aos/dist/aos.css";
 import Aos from "aos";
 import "../index.css";
-import ScratchCard from "./ScratchCard.jsx"; // ✅ import ScratchCard
+import ScratchCard from "./ScratchCard.jsx"; 
 import CustomCursor from "./CustomCursor.jsx";
 import { Eraser } from "lucide-react";
+
 const Qualification = () => {
   useEffect(() => {
     Aos.init({
@@ -84,7 +85,7 @@ const Qualification = () => {
               className="px-2 py-6 flex flex-col gap-2 md:flex-row md:items-center justify-between transition-transform "
             >
               <div className="md:w-full">
-                <h2 className="text-xl md:text-2xl font-semibold text-sky-600">
+                <h2 className="text-xl md:text-[20px] font-semibold uppercase text-sky-700">
                   {qual.title}
                 </h2>
                 <p className="text-gray-700 mt-1 text-sm md:text-base">

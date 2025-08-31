@@ -85,6 +85,7 @@ const ScratchCard = ({ image1, image2, brushSize = 30 }) => {
       <img
         src={image2}
         alt="hidden"
+        loading="lazy"
         width={dimensions.width}
         height={dimensions.height}
         className="block w-full h-full object-cover rounded-xl"
