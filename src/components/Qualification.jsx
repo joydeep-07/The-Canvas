@@ -7,7 +7,8 @@ import "aos/dist/aos.css";
 import Aos from "aos";
 import "../index.css";
 import ScratchCard from "./ScratchCard.jsx"; // ✅ import ScratchCard
-
+import CustomCursor from "./CustomCursor.jsx";
+import { Eraser } from "lucide-react";
 const Qualification = () => {
   useEffect(() => {
     Aos.init({
@@ -101,14 +102,15 @@ const Qualification = () => {
         </div>
 
         {/* Sticky Image for Desktop */}
-        <div className="hidden md:block md:w-1/3">
+        <div id="scratch" className="hidden md:block md:w-1/3">
           <div className="sticky top-20">
             <div className="rounded-xl h-[89vh]  overflow-hidden flex justify-center items-center">
-              <ScratchCard image1={img1} image2={img2} brushSize={70} />
+              <ScratchCard image1={img1} image2={img2} brushSize={75} />
             </div>
           </div>
         </div>
       </div>
+      <CustomCursor icon={Eraser} targetId="scratch" />
     </div>
   );
 };

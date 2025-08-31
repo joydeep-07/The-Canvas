@@ -101,7 +101,7 @@ const ScratchCard = ({ image1, image2, brushSize = 30 }) => {
           position: "absolute",
           top: 0,
           left: 0,
-          cursor: "pointer",
+          cursor: "none",
           borderRadius: "0.75rem",
         }}
       />
