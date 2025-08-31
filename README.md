@@ -4,7 +4,7 @@ This is my personal **portfolio website** built using **React**, **Tailwind CSS*
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Responsive Design**: Optimized for desktop, tablet, and mobile screens using Tailwind CSS.
 - **Smooth Animations**: Implemented with GSAP for engaging page transitions and interactive elements.
@@ -15,7 +15,7 @@ This is my personal **portfolio website** built using **React**, **Tailwind CSS*
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - **React.js** – Frontend library for building UI.
 - **Tailwind CSS** – Utility-first CSS framework for styling.
