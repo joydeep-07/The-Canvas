@@ -111,7 +111,7 @@ const Navbar = () => {
                     className="text-xl font-semibold text-gray-900 cursor-pointer"
                     onClick={() => {
                       scrollToSection(item);
-                      setIsOpen(false); // close menu after clicking
+                      setIsOpen(false); 
                     }}
                   >
                     {item}
