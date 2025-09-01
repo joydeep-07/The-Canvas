@@ -19,27 +19,29 @@ const Projects = () => {
       offset: 100,
     });
 
-    const buildSpiralPath = (
-      start,
-      end,
-      steps = 200,
-      amplitude = 120,
-      drift = 0.4
-    ) => {
+    const buildSpiralPath = (start, end, steps = 300) => {
       const pts = [];
+
+      const adjustedEnd = { ...end, y: end.y + 250 };
 
       for (let i = 0; i <= steps; i++) {
         const t = i / steps;
-        const ease = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-        const x = start.x + (end.x - start.x) * ease;
 
-        let y = start.y + (end.y - start.y) * ease;
-        const wobbleStrength = (1 - t) * 0.8 + 0.2;
-        y +=
-          Math.sin(t * Math.PI * 3 + Math.sin(t * Math.PI * 6)) *
-          amplitude *
-          wobbleStrength;
-        y += drift * t * amplitude;
+        const ease = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+        const x = start.x + (adjustedEnd.x - start.x) * ease;
+
+        let y;
+        if (t < 0.4) {
+          const loopT = t / 0.4;
+          y = start.y - Math.sin(loopT * Math.PI * 2) * 160;
+        } else {
+          const driftT = (t - 0.4) / 0.6;
+          y =
+            start.y -
+            80 * Math.sin(driftT * Math.PI * 1.2) +
+            (adjustedEnd.y - start.y) * driftT;
+        }
 
         pts.push({ x, y });
       }
@@ -138,7 +140,8 @@ const Projects = () => {
       <div className="w-full max-w-4xl px-4 flex items-start">
         <div
           id="plane"
-          className="absolute z-999999 left-10 top-10 hidden lg:block"
+          data-speed="0.1"
+          className="absolute z-999999 left-10 top-15 hidden lg:block"
         >
           <img className="h-24 w-auto" src={plane} alt="plane" />
         </div>
