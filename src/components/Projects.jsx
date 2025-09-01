@@ -3,24 +3,105 @@ import projects from "../Data/projects.js";
 import me from "../assets/project.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import plane from "../assets/plane.png";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 const Projects = () => {
   useEffect(() => {
     Aos.init({
-      duration: 700, 
+      duration: 700,
       easing: "ease-in-out",
-      once: true, 
+      once: true,
       offset: 100,
     });
+
+    const buildSpiralPath = (
+      start,
+      end,
+      steps = 200,
+      amplitude = 120,
+      drift = 0.4
+    ) => {
+      const pts = [];
+
+      for (let i = 0; i <= steps; i++) {
+        const t = i / steps;
+        const ease = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        const x = start.x + (end.x - start.x) * ease;
+
+        let y = start.y + (end.y - start.y) * ease;
+        const wobbleStrength = (1 - t) * 0.8 + 0.2;
+        y +=
+          Math.sin(t * Math.PI * 3 + Math.sin(t * Math.PI * 6)) *
+          amplitude *
+          wobbleStrength;
+        y += drift * t * amplitude;
+
+        pts.push({ x, y });
+      }
+
+      return pts;
+    };
+
+    const setupPlaneAnimation = () => {
+      const planeEl = document.querySelector("#plane");
+      const projectsEl = document.querySelector("#projects");
+      if (!planeEl || !projectsEl) return;
+
+      const projectsRect = projectsEl.getBoundingClientRect();
+      const planeRect = planeEl.getBoundingClientRect();
+
+      const start = {
+        x: planeRect.left - projectsRect.left,
+        y: planeRect.top - projectsRect.top,
+      };
+
+      const end = {
+        x: Math.max(20, projectsRect.width - planeRect.width - 20),
+        y: Math.max(20, projectsRect.height - planeRect.height - 20),
+      };
+
+      const pathPoints = buildSpiralPath(start, end, 2.5, 96);
+
+      gsap.killTweensOf(planeEl);
+      gsap.set(planeEl, { x: start.x, y: start.y });
+
+      gsap.to(planeEl, {
+        motionPath: {
+          path: pathPoints,
+          align: false,
+          autoRotate: true,
+        },
+        ease: "EaseInOut",
+        scrollTrigger: {
+          trigger: projectsEl,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1,
+        },
+      });
+    };
+
+    const t = setTimeout(setupPlaneAnimation, 60);
+    window.addEventListener("resize", setupPlaneAnimation);
+
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("resize", setupPlaneAnimation);
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+    };
   }, []);
 
   const ProjectCard = ({ name, description, technologies, link, index }) => (
     <div
       data-aos="fade-up"
-      data-aos-delay={80 + index * 10} 
+      data-aos-delay={80 + index * 10}
       className="relative group bg-white border border-gray-300 rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition"
     >
-      {/* Overlay Visit Button */}
       <div className="absolute inset-0 flex items-center justify-center backdrop-blur-[1.5px] opacity-0 group-hover:opacity-100 transition duration-500 z-10">
         <a
           href={link}
@@ -32,7 +113,6 @@ const Projects = () => {
         </a>
       </div>
 
-      {/* Card Content */}
       <div className="p-6 relative z-0">
         <h4 className="text-xl font-semibold text-sky-600 mb-2">{name}</h4>
         <p className="text-gray-700 text-sm mb-4">{description}</p>
@@ -55,36 +135,38 @@ const Projects = () => {
       id="projects"
       className="min-h-screen bg-white relative font-sans flex flex-col items-center tracking-wide py-20 px-5 md:px-10"
     >
-      {/* Section Title and Subtitle */}
-      <div className="w-full max-w-4xl px-4">
-        <h1
-          data-aos="fade-up"
-          data-aos-delay="100"
-          className="text-center text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+      <div className="w-full max-w-4xl px-4 flex items-start">
+        <div
+          id="plane"
+          className="absolute z-999999 left-10 top-10 hidden lg:block"
         >
-          My Projects & Works
-        </h1>
-        <p
-          data-aos="fade-up"
-          data-aos-delay="100"
-          className="text-center text-base md:text-lg text-gray-600 italic mb-10"
-        >
-          “The best way to predict the future is not to wait for it to happen,
-          but to create it with vision, determination, and action.”
-        </p>
+          <img className="h-24 w-auto" src={plane} alt="plane" />
+        </div>
+
+        <div className="flex-1 text-center">
+          <h1
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+          >
+            My Projects & Works
+          </h1>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="text-base md:text-lg text-gray-600 italic mb-10"
+          >
+            “The best way to predict the future is not to wait for it to happen,
+            but to create it with vision, determination, and action.”
+          </p>
+        </div>
       </div>
 
-      {/* Main Content Container */}
-      {/* Main Content Container */}
       <div className="w-full max-w-8xl mx-auto">
         <div className="p-4 md:p-8">
           <div className="flex flex-col lg:flex-row gap-10">
-            {/* Left side: paragraph + project cards */}
             <div className="flex-1 order-2 lg:order-1">
-              {/* Paragraph above cards */}
-              {/* Intro Section (before cards) */}
               <div data-aos="fade-up" data-aos-delay="100" className="mb-10">
-                {/* Heading */}
                 <h3 className="text-xl sm:text-2xl text-black font-bold text-left">
                   PROJECTS OVERVIEW
                 </h3>
@@ -93,7 +175,6 @@ const Projects = () => {
                   FULLSTACK DEVELOPER
                 </p>
 
-                {/* Subtitle / Skill-like batches */}
                 <div className="flex flex-wrap gap-2 mt-2 mb-6">
                   <span className="px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm font-mono">
                     MERN STACK
@@ -109,7 +190,6 @@ const Projects = () => {
                   </span>
                 </div>
 
-                {/* Paragraph */}
                 <p
                   data-aos="fade-up"
                   data-aos-delay="150"
@@ -144,7 +224,6 @@ const Projects = () => {
                 REACT DEVELOPER
               </p>
 
-              {/* Project cards grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {projects.map((project, index) => (
                   <ProjectCard key={project.id} index={index} {...project} />
@@ -152,7 +231,6 @@ const Projects = () => {
               </div>
             </div>
 
-            {/* Right side: Sticky image (visible only in large screens) */}
             <div className="hidden lg:block lg:w-1/3 order-1 lg:order-2">
               <div className="sticky top-26">
                 <img
