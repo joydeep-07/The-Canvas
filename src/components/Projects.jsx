@@ -4,6 +4,7 @@ import me from "../assets/project.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import plane from "../assets/plane.png";
+import windmill from "../assets/windmill.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
@@ -19,18 +20,15 @@ const Projects = () => {
       offset: 100,
     });
 
+    // <<< ================== PATH ================== >>>
     const buildSpiralPath = (start, end, steps = 300) => {
       const pts = [];
-
       const adjustedEnd = { ...end, y: end.y + 250 };
 
       for (let i = 0; i <= steps; i++) {
         const t = i / steps;
-
         const ease = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-
         const x = start.x + (adjustedEnd.x - start.x) * ease;
-
         let y;
         if (t < 0.4) {
           const loopT = t / 0.4;
@@ -42,7 +40,6 @@ const Projects = () => {
             80 * Math.sin(driftT * Math.PI * 1.2) +
             (adjustedEnd.y - start.y) * driftT;
         }
-
         pts.push({ x, y });
       }
 
@@ -91,12 +88,52 @@ const Projects = () => {
     const t = setTimeout(setupPlaneAnimation, 60);
     window.addEventListener("resize", setupPlaneAnimation);
 
+    // ✅ Windmill spin on scroll
+    const windmillEl = document.querySelector("#windmill");
+    if (windmillEl) {
+      gsap.to(windmillEl, {
+        rotation: 720, // 2 full spins
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#projects",
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1,
+        },
+      });
+
+      // Windmill spin aniamtion on mouse move
+      let mouseRotation = 0;
+      const handleMouseMove = (e) => {
+        const centerX = window.innerWidth / 2;
+        const deltaX = e.clientX - centerX;
+       
+        mouseRotation = deltaX * 0.05;
+        gsap.to(windmillEl, {
+          rotate: `+=${mouseRotation}`,
+          duration: 0.3,
+          ease: "power2.out",
+        });
+      };
+
+      window.addEventListener("mousemove", handleMouseMove);
+
+      // cleanup
+      return () => {
+        clearTimeout(t);
+        window.removeEventListener("resize", setupPlaneAnimation);
+        window.removeEventListener("mousemove", handleMouseMove);
+        ScrollTrigger.getAll().forEach((st) => st.kill());
+      };
+    }
+
     return () => {
       clearTimeout(t);
       window.removeEventListener("resize", setupPlaneAnimation);
       ScrollTrigger.getAll().forEach((st) => st.kill());
     };
   }, []);
+
 
   const ProjectCard = ({ name, description, technologies, link, index }) => (
     <div
@@ -242,6 +279,14 @@ const Projects = () => {
                   alt="Projects"
                   className="rounded-xl max-h-[80vh] w-full object-cover shadow-xl"
                 />
+                <div className="flex justify-center  ">
+                  <img
+                    id="windmill"
+                    src={windmill}
+                    alt="Windmill"
+                    className="absolute bottom-25 h-[37%]"
+                  />
+                </div>
               </div>
             </div>
           </div>
