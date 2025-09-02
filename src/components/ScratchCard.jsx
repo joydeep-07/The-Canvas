@@ -62,13 +62,13 @@ const ScratchCard = ({ image1, image2, brushSize = 30 }) => {
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
 
-    // smooth line
+  
     ctx.beginPath();
     ctx.moveTo(lastX, lastY);
     ctx.lineTo(x, y);
     ctx.stroke();
 
-    // extra circle
+   
     ctx.beginPath();
     ctx.arc(x, y, brushSize / 2, 0, Math.PI * 2, false);
     ctx.fill();
