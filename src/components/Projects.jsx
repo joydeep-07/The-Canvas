@@ -88,11 +88,11 @@ const Projects = () => {
     const t = setTimeout(setupPlaneAnimation, 60);
     window.addEventListener("resize", setupPlaneAnimation);
 
-    // ✅ Windmill spin on scroll
+    // <<< ================== WINDMILL ================== >>>
     const windmillEl = document.querySelector("#windmill");
     if (windmillEl) {
       gsap.to(windmillEl, {
-        rotation: 720, // 2 full spins
+        rotation: 720, 
         ease: "none",
         scrollTrigger: {
           trigger: "#projects",
