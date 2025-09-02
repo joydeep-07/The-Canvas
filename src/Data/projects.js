@@ -17,6 +17,21 @@ const projects = [
   },
   {
     id: 2,
+    name: "MedCare",
+    description:
+      "Providing exceptional medical care with cutting-edge technology and a patient-centered approach. Your health and well-being are our top priority.",
+    technologies: [
+      "MongoDB",
+      "Express",
+      "React",
+      "Node.js",
+      "JavaScript",
+      "Tailwind CSS",
+    ],
+    link: "https://medcare-book-appointments.netlify.app/",
+  },
+  {
+    id: 3,
     name: "GTA VI",
     description:
       "A stunning GTA-inspired landing page built with React, Tailwind, and GSAP, featuring smooth animations, parallax effects, and interactivity.",
@@ -24,7 +39,7 @@ const projects = [
     link: "https://web-gtavi.netlify.app/",
   },
   {
-    id: 3,
+    id: 4,
     name: "Crazia.io",
     description:
       "Crazia.io is my creative playground showcasing modern design, smooth animations, custom cursor & interactive hover experiences.",
@@ -32,7 +47,7 @@ const projects = [
     link: "https://crazia.netlify.app/",
   },
   {
-    id: 4,
+    id: 5,
     name: "Twisty Tangle",
     description:
       "Twisty Tangle is a fast-paced word scramble game where players race against time to unscramble hidden words.",
@@ -40,7 +55,7 @@ const projects = [
     link: "https://twisttangle.netlify.app/",
   },
   {
-    id: 5,
+    id: 6,
     name: "Bookly",
     description:
       "Find the best books from your favorite writers, explore hundreds of books with all possible categories, take advantage of the 50% discount and much more.",
@@ -48,7 +63,7 @@ const projects = [
     link: "https://joydeep-07.github.io/bookly/",
   },
   {
-    id: 6,
+    id: 7,
     name: "Sync Task",
     description:
       "Sync Task organizes your day with futuristic elegance—smart, responsive, and built to elevate focus, clarity, and daily productivity.",
@@ -56,7 +71,7 @@ const projects = [
     link: "https://synctasks.netlify.app/",
   },
   {
-    id: 7,
+    id: 8,
     name: "GridWars",
     description:
       "Challenge your mind in a thrilling Tic Tac Toe match—outsmart the computer, think ahead, and claim victory with every strategic move you make!",
