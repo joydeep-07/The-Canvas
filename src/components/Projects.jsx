@@ -216,16 +216,16 @@ const Projects = () => {
                 </p>
 
                 <div className="flex flex-wrap gap-2 mt-2 mb-6">
-                  <span className="px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm font-mono">
+                  <span className="px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm">
                     MERN STACK
                   </span>
-                  <span className="px-3 sm:px-4 py-2 bg-green-100 text-green-700 border border-green-400 rounded-full text-xs sm:text-sm font-mono">
+                  <span className="px-3 sm:px-4 py-2 bg-green-100 text-green-700 border border-green-400 rounded-full text-xs sm:text-sm ">
                     FULL STACK
                   </span>
-                  <span className="px-3 sm:px-4 py-2 bg-purple-100 text-purple-700 border border-purple-400 rounded-full text-xs sm:text-sm font-mono">
+                  <span className="px-3 sm:px-4 py-2 bg-purple-100 text-purple-700 border border-purple-400 rounded-full text-xs sm:text-sm ">
                     RESPONSIVE DESIGN
                   </span>
-                  <span className="px-3 sm:px-4 py-2 bg-orange-100 text-orange-700 border border-orange-400 rounded-full text-xs sm:text-sm font-mono">
+                  <span className="px-3 sm:px-4 py-2 bg-orange-100 text-orange-700 border border-orange-400 rounded-full text-xs sm:text-sm ">
                     DEPLOYMENT
                   </span>
                 </div>
