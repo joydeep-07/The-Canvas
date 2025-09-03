@@ -15,21 +15,21 @@ const projects = [
     technologies: ["React", "Tailwind", "WebGL"],
     link: "https://lightloom.netlify.app/",
   },
-  {
-    id: 2,
-    name: "MedCare",
-    description:
-      "Providing exceptional medical care with cutting-edge technology and a patient-centered approach. Your health and well-being are our top priority.",
-    technologies: [
-      "MongoDB",
-      "Express",
-      "React",
-      "Node.js",
-      "JavaScript",
-      "Tailwind CSS",
-    ],
-    link: "https://medcare-book-appointments.netlify.app/",
-  },
+  // {
+  //   id: 2,
+  //   name: "MedCare",
+  //   description:
+  //     "Providing exceptional medical care with cutting-edge technology and a patient-centered approach. Your health and well-being are our top priority.",
+  //   technologies: [
+  //     "MongoDB",
+  //     "Express",
+  //     "React",
+  //     "Node.js",
+  //     "JavaScript",
+  //     "Tailwind CSS",
+  //   ],
+  //   link: "https://medcare-book-appointments.netlify.app/",
+  // },
   {
     id: 3,
     name: "GTA VI",
