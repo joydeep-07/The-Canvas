@@ -1,0 +1,29 @@
+.wow-text {
+  font-size: 2rem;
+}
+
+.wow-text .words {
+  position: relative;
+  display: inline-block;
+  height: 2.1rem; /* height of one word */
+  overflow: hidden;
+  color: #ff8800;
+}
+
+.wow-text .words span {
+  display: block;
+  line-height: 2.5rem;
+  animation: animateWords 10s infinite;
+}
+
+@keyframes animateWords {
+  0%   { transform: translateY(0%); }
+  20%  { transform: translateY(0%); }
+  25%  { transform: translateY(-100%); }
+  45%  { transform: translateY(-100%); }
+  50%  { transform: translateY(-200%); }
+  70%  { transform: translateY(-200%); }
+  75%  { transform: translateY(-300%); }
+  95%  { transform: translateY(-300%); }
+  100% { transform: translateY(-400%); }
+}

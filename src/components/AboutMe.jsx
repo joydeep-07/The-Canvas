@@ -2,6 +2,7 @@ import React from "react";
 import * as Icons from "lucide-react";
 import skills from "../Data/skills.js";
 import { Mail, Phone } from "lucide-react";
+import "../style/About.css"
 import {
   FaLinkedin,
   FaGithub,
@@ -22,9 +23,15 @@ const AboutMe = () => {
     <div id="about" className="px-2 bg-white sm:px-6 md:px-0">
       <div className=" lg:col-span-2">
         {/* Name */}
-        <h3 className="text-xl sm:text-2xl text-black font-bold text-center  md:text-left">
-          JOYDEEP PAUL
-        </h3>
+        <h1 class="wow-text text-xl sm:text-2xl text-black font-bold text-center tracking-tight md:text-left">
+          I'M {" "}
+          <span class="words">
+            <span>JOYDEEP</span>
+            <span> A DEVELOPER</span>
+            <span> A PROGRAMMER</span>
+            <span> A DESIGNER</span>
+          </span>
+        </h1>
 
         <p className="text-sky-600 font-mono text-xs sm:text-sm mb-4 text-center md:text-left">
           MCA STUDENT & MERN DEVELOPER
