@@ -97,18 +97,6 @@ const Earth = () => {
     const clouds = new THREE.Mesh(cloudsGeo, cloudsMat);
     earthGroup.add(clouds);
 
-    // ===== Shadow plane under Earth =====
-    const shadowPlaneGeo = new THREE.PlaneGeometry(4, 4);
-    const shadowMat = new THREE.ShadowMaterial({ opacity: 0.25 });
-    const shadowPlane = new THREE.Mesh(shadowPlaneGeo, shadowMat);
-    shadowPlane.rotation.x = -Math.PI / 2;
-    shadowPlane.position.y = -1.4;
-    shadowPlane.receiveShadow = true;
-    scene.add(shadowPlane);
-
-    renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-
     // ===== Interactions (drag only, no zoom) =====
     let isDragging = false;
     let last = { x: 0, y: 0 };
