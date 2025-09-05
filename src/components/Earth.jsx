@@ -30,6 +30,7 @@ const Earth = () => {
     // ===== Lights =====
     const sunLight = new THREE.DirectionalLight(0xffffff, 1.4);
     sunLight.position.set(5, 3, 5);
+    sunLight.castShadow = true;
     scene.add(sunLight);
 
     const backLight = new THREE.DirectionalLight(0x224466, 0.4);
@@ -82,6 +83,7 @@ const Earth = () => {
       specular: new THREE.Color(0x333333),
     });
     const earth = new THREE.Mesh(earthGeo, earthMat);
+    earth.castShadow = true;
     earthGroup.add(earth);
 
     // Clouds
@@ -95,12 +97,23 @@ const Earth = () => {
     const clouds = new THREE.Mesh(cloudsGeo, cloudsMat);
     earthGroup.add(clouds);
 
-    // ===== Interactions (drag + zoom) =====
+    // ===== Shadow plane under Earth =====
+    const shadowPlaneGeo = new THREE.PlaneGeometry(4, 4);
+    const shadowMat = new THREE.ShadowMaterial({ opacity: 0.25 });
+    const shadowPlane = new THREE.Mesh(shadowPlaneGeo, shadowMat);
+    shadowPlane.rotation.x = -Math.PI / 2;
+    shadowPlane.position.y = -1.4;
+    shadowPlane.receiveShadow = true;
+    scene.add(shadowPlane);
+
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+    // ===== Interactions (drag only, no zoom) =====
     let isDragging = false;
     let last = { x: 0, y: 0 };
     const rot = { x: 0, y: 0 };
     const targetRot = { x: 0, y: 0 };
-    let targetZoom = camera.position.z;
 
     const posFromEvent = (e) =>
       e.touches?.length
@@ -120,15 +133,8 @@ const Earth = () => {
       const dx = (x - last.x) * 0.005;
       const dy = (y - last.y) * 0.005;
       targetRot.y += dx;
-      targetRot.x += dy; // free rotation (no clamp)
+      targetRot.x += dy;
       last = { x, y };
-    };
-
-    const onWheel = (e) => {
-      if (renderer.domElement.contains(e.target)) {
-        targetZoom = Math.max(1.6, Math.min(8, targetZoom + e.deltaY * 0.002));
-        e.preventDefault();
-      }
     };
 
     const onResize = () => {
@@ -149,7 +155,6 @@ const Earth = () => {
       passive: true,
     });
     window.addEventListener("touchend", onPointerUp);
-    renderer.domElement.addEventListener("wheel", onWheel, { passive: false });
     window.addEventListener("resize", onResize);
     onResize();
 
@@ -163,10 +168,9 @@ const Earth = () => {
       earthGroup.rotation.y = rot.y;
       earthGroup.rotation.x = rot.x;
 
-      // Auto slow spin (optional, can remove if you want pure manual control)
+      // Auto slow spin
       targetRot.y += 0.0008;
 
-      camera.position.z += (targetZoom - camera.position.z) * 0.1;
       clouds.rotation.y += 0.0015;
 
       renderer.render(scene, camera);
@@ -183,20 +187,22 @@ const Earth = () => {
       renderer.domElement.removeEventListener("touchstart", onPointerDown);
       renderer.domElement.removeEventListener("touchmove", onPointerMove);
       window.removeEventListener("touchend", onPointerUp);
-      renderer.domElement.removeEventListener("wheel", onWheel);
       window.removeEventListener("resize", onResize);
     };
   }, []);
 
   return (
-    <div className="relative w-full h-full rounded-xl">
+    <div className="relative w-full h-full flex flex-col items-center">
       {loading && (
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-white z-50 transition-opacity duration-700">
           <div className="w-12 h-12 border-4 border-slate-300 border-t-cyan-400 rounded-full animate-spin mb-4"></div>
           <p className="text-sm opacity-70">Loading Earth textures...</p>
         </div>
       )}
-      <div ref={mountRef} className="w-full h-full" />
+      <div ref={mountRef} className="w-full h-[80vh]" />
+      <h1 className="mt-4 text-2xl font-bold text-gray-800 drop-shadow-md">
+        This is Earth
+      </h1>
     </div>
   );
 };
