@@ -1,7 +1,9 @@
 .grid-bg {
   background-image: 
-    linear-gradient(to right, #e5e7eb 1px, transparent 1px),
-    linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
-  background-size: 1cm 1cm; /* makes 1cm x 1cm squares */
-  background-color: white; /* fallback */
+    linear-gradient(to right, #d1d5db 1px, transparent 1px),
+    linear-gradient(to bottom, #d1d5db 1px, transparent 1px);
+  background-size: calc(100% / 12) calc(100% / 17); /* 12 cols, 17 rows */
+  background-color: #ffffff;
+  border-right: 1px solid #d1d5db;
+  border-bottom: 1px solid #d1d5db;
 }
