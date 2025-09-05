@@ -4,6 +4,8 @@ import me from "../assets/project.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "../style/Circles.css"
+import Hero from "./Hero.jsx";
+import Earth from "./Earth.jsx";
 const Projects = () => {
   useEffect(() => {
     Aos.init({
@@ -143,32 +145,8 @@ const Projects = () => {
             </div>
 
             <div className="hidden lg:block lg:w-1/3 order-1 lg:order-2">
-              <div className="sticky flex flex-col justify-center items-center top-35 h-[50vh] w-full">
-                <div className="h-[400px] w-[400px] flex items-center justify-center">
-                  <div className="circle h-[400px] w-[400px] from-[#eff6ff] to-[#d9fbe8]">
-                    <div className="circle h-[360px] w-[360px] from-[#dbeafe] to-[#baf7d2]">
-                      <div className="circle h-[320px] w-[320px] from-[#bfdbfe] to-[#94f5be]">
-                        <div className="circle h-[280px] w-[280px] from-[#93c5fd] to-[#64eea5]">
-                          <div className="circle h-[240px] w-[240px] from-[#60a5fa] to-[#3ee58c]">
-                            <div className="circle h-[200px] w-[200px] from-[#3b82f6] to-[#1ed97a]">
-                              <div className="circle h-[160px] w-[160px] from-[#2563eb] to-[#17c069]">
-                                <div className="circle h-[120px] w-[120px] from-[#1d4ed8] to-[#12995b]">
-                                  <div className="circle h-[80px] w-[80px] from-[#1e40af] to-[#0e7546]">
-                                    <div className="circle h-[40px] w-[40px] from-[#1e3a8a] to-[#0a5534]"></div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <h1>
-                 Here are all the projects
-                </h1>
+              <div className="sticky overflow-hidden flex flex-col justify-center items-center top-26 h-[80vh] w-full">
+                <Earth />
               </div>
             </div>
           </div>
@@ -179,3 +157,7 @@ const Projects = () => {
 };
 
 export default Projects;
+
+
+
+
