@@ -145,7 +145,7 @@ const Projects = () => {
             </div>
 
             <div className="hidden lg:block lg:w-1/3 order-1 lg:order-2">
-              <div className="sticky overflow-hidden flex flex-col justify-center items-center top-26 h-[80vh] w-full">
+              <div className="sticky overflow-hidden flex flex-col justify-center items-center top-26 h-[80vh] w-full grid-bg">
                 <Earth />
               </div>
             </div>

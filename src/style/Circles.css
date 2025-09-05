@@ -1,35 +1,7 @@
-.circle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: linear-gradient(0deg, var(--tw-gradient-from), var(--tw-gradient-to));
-  background-size: 200% 200%;
-  animation: animateGradient 10s ease-in-out infinite;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); /* subtle glow */
+.grid-bg {
+  background-image: 
+    linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+    linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+  background-size: 1cm 1cm; /* makes 1cm x 1cm squares */
+  background-color: white; /* fallback */
 }
-
-/* Gradient shift instead of rigid rotation */
-@keyframes animateGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Layered speeds for depth */
-.circle:nth-child(1) { animation-duration: 18s; }
-.circle:nth-child(2) { animation-duration: 22s; }
-.circle:nth-child(3) { animation-duration: 26s; }
-.circle:nth-child(4) { animation-duration: 30s; }
-.circle:nth-child(5) { animation-duration: 34s; }
-.circle:nth-child(6) { animation-duration: 38s; }
-.circle:nth-child(7) { animation-duration: 42s; }
-.circle:nth-child(8) { animation-duration: 46s; }
-.circle:nth-child(9) { animation-duration: 50s; }
-.circle:nth-child(10) { animation-duration: 54s; }

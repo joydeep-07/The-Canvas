@@ -11,14 +11,17 @@ const Earth = () => {
 
     // ===== Scene setup =====
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color("#ffffff"); // white background
+    // scene.background = new THREE.Color("#ffffff");
+
+    
+
 
     const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 2000);
     camera.position.set(0, 0, 3.2);
 
     const renderer = new THREE.WebGLRenderer({
       antialias: true,
-      alpha: false,
+      alpha: true, // ✅ allow transparency
       powerPreference: "high-performance",
     });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
