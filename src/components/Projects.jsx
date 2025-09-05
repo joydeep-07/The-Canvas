@@ -3,14 +3,7 @@ import projects from "../Data/projects.js";
 import me from "../assets/project.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import plane from "../assets/plane.png";
-import windmill from "../assets/windmill.png";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-
-gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
-
+import "../style/Circles.css"
 const Projects = () => {
   useEffect(() => {
     Aos.init({
@@ -19,121 +12,7 @@ const Projects = () => {
       once: true,
       offset: 100,
     });
-
-    // <<< ================== PATH ================== >>>
-    const buildSpiralPath = (start, end, steps = 300) => {
-      const pts = [];
-      const adjustedEnd = { ...end, y: end.y + 250 };
-
-      for (let i = 0; i <= steps; i++) {
-        const t = i / steps;
-        const ease = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-        const x = start.x + (adjustedEnd.x - start.x) * ease;
-        let y;
-        if (t < 0.4) {
-          const loopT = t / 0.4;
-          y = start.y - Math.sin(loopT * Math.PI * 2) * 160;
-        } else {
-          const driftT = (t - 0.4) / 0.6;
-          y =
-            start.y -
-            80 * Math.sin(driftT * Math.PI * 1.2) +
-            (adjustedEnd.y - start.y) * driftT;
-        }
-        pts.push({ x, y });
-      }
-
-      return pts;
-    };
-
-    const setupPlaneAnimation = () => {
-      const planeEl = document.querySelector("#plane");
-      const projectsEl = document.querySelector("#projects");
-      if (!planeEl || !projectsEl) return;
-
-      const projectsRect = projectsEl.getBoundingClientRect();
-      const planeRect = planeEl.getBoundingClientRect();
-
-      const start = {
-        x: planeRect.left - projectsRect.left,
-        y: planeRect.top - projectsRect.top,
-      };
-
-      const end = {
-        x: Math.max(20, projectsRect.width - planeRect.width - 20),
-        y: Math.max(20, projectsRect.height - planeRect.height - 20),
-      };
-
-      const pathPoints = buildSpiralPath(start, end, 2.5, 96);
-
-      gsap.killTweensOf(planeEl);
-      gsap.set(planeEl, { x: start.x, y: start.y });
-
-      gsap.to(planeEl, {
-        motionPath: {
-          path: pathPoints,
-          align: false,
-          autoRotate: true,
-        },
-        ease: "EaseInOut",
-        scrollTrigger: {
-          trigger: projectsEl,
-          start: "top top",
-          end: "bottom bottom",
-          scrub: 1,
-        },
-      });
-    };
-
-    const t = setTimeout(setupPlaneAnimation, 60);
-    window.addEventListener("resize", setupPlaneAnimation);
-
-    // <<< ================== WINDMILL ================== >>>
-    const windmillEl = document.querySelector("#windmill");
-    if (windmillEl) {
-      gsap.to(windmillEl, {
-        rotation: 720, 
-        ease: "none",
-        scrollTrigger: {
-          trigger: "#projects",
-          start: "top top",
-          end: "bottom bottom",
-          scrub: 1,
-        },
-      });
-
-      // Windmill spin aniamtion on mouse move
-      let mouseRotation = 0;
-      const handleMouseMove = (e) => {
-        const centerX = window.innerWidth / 2;
-        const deltaX = e.clientX - centerX;
-       
-        mouseRotation = deltaX * 0.05;
-        gsap.to(windmillEl, {
-          rotate: `+=${mouseRotation}`,
-          duration: 0.3,
-          ease: "power2.out",
-        });
-      };
-
-      window.addEventListener("mousemove", handleMouseMove);
-
-      // cleanup
-      return () => {
-        clearTimeout(t);
-        window.removeEventListener("resize", setupPlaneAnimation);
-        window.removeEventListener("mousemove", handleMouseMove);
-        ScrollTrigger.getAll().forEach((st) => st.kill());
-      };
-    }
-
-    return () => {
-      clearTimeout(t);
-      window.removeEventListener("resize", setupPlaneAnimation);
-      ScrollTrigger.getAll().forEach((st) => st.kill());
-    };
   }, []);
-
 
   const ProjectCard = ({ name, description, technologies, link, index }) => (
     <div
@@ -175,14 +54,6 @@ const Projects = () => {
       className="min-h-screen bg-white relative font-sans flex flex-col items-center tracking-wide py-20 px-5 md:px-10"
     >
       <div className="w-full max-w-4xl px-4 flex items-start">
-        <div
-          id="plane"
-          data-speed="0.1"
-          className="absolute z-999999 left-10 top-15 hidden lg:block"
-        >
-          <img className="h-24 w-auto" src={plane} alt="plane" />
-        </div>
-
         <div className="flex-1 text-center">
           <h1
             data-aos="fade-up"
@@ -272,21 +143,32 @@ const Projects = () => {
             </div>
 
             <div className="hidden lg:block lg:w-1/3 order-1 lg:order-2">
-              <div className="sticky top-26">
-                <img
-                  src={me}
-                  loading="lazy"
-                  alt="Projects"
-                  className="rounded-xl max-h-[80vh] w-full object-cover shadow-xl"
-                />
-                <div className="flex justify-center  ">
-                  <img
-                    id="windmill"
-                    src={windmill}
-                    alt="Windmill"
-                    className="absolute bottom-25 h-[37%]"
-                  />
+              <div className="sticky flex flex-col justify-center items-center top-35 h-[50vh] w-full">
+                <div className="h-[400px] w-[400px] flex items-center justify-center">
+                  <div className="circle h-[400px] w-[400px] from-[#eff6ff] to-[#d9fbe8]">
+                    <div className="circle h-[360px] w-[360px] from-[#dbeafe] to-[#baf7d2]">
+                      <div className="circle h-[320px] w-[320px] from-[#bfdbfe] to-[#94f5be]">
+                        <div className="circle h-[280px] w-[280px] from-[#93c5fd] to-[#64eea5]">
+                          <div className="circle h-[240px] w-[240px] from-[#60a5fa] to-[#3ee58c]">
+                            <div className="circle h-[200px] w-[200px] from-[#3b82f6] to-[#1ed97a]">
+                              <div className="circle h-[160px] w-[160px] from-[#2563eb] to-[#17c069]">
+                                <div className="circle h-[120px] w-[120px] from-[#1d4ed8] to-[#12995b]">
+                                  <div className="circle h-[80px] w-[80px] from-[#1e40af] to-[#0e7546]">
+                                    <div className="circle h-[40px] w-[40px] from-[#1e3a8a] to-[#0a5534]"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
+                <h1>
+                 Here are all the projects
+                </h1>
               </div>
             </div>
           </div>
