@@ -22,8 +22,8 @@ const Home = () => {
         document.documentElement.scrollHeight - window.innerHeight;
       const progress = scrollTop / docHeight;
 
-      // Update circular border progress
-      const circumference = 2 * Math.PI * 20; // r=20
+    
+      const circumference = 2 * Math.PI * 20; 
       const offset = circumference - progress * circumference;
       gsap.to(circleRef.current, {
         strokeDashoffset: offset,
