@@ -3,11 +3,9 @@ import projects from "../Data/projects.js";
 import me from "../assets/project.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import "../style/Circles.css";
+import "../style/Circles.css"
 import Hero from "./Hero.jsx";
 import Earth from "./Earth.jsx";
-import { FaPlus } from "react-icons/fa6";
-
 const Projects = () => {
   useEffect(() => {
     Aos.init({
@@ -22,7 +20,7 @@ const Projects = () => {
     <div
       data-aos="fade-up"
       data-aos-delay={80 + index * 10}
-      className="relative group bg-white border border-gray-300 rounded-xl overflow-hidden shadow-md transition"
+      className="relative group bg-white border border-gray-300 rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition"
     >
       <div className="absolute inset-0 flex items-center justify-center backdrop-blur-[1.5px] opacity-0 group-hover:opacity-100 transition duration-500 z-10">
         <a
@@ -143,21 +141,6 @@ const Projects = () => {
                 {projects.map((project, index) => (
                   <ProjectCard key={project.id} index={index} {...project} />
                 ))}
-
-                {/* Plus Icon Card */}
-                <div
-                  data-aos="fade-up"
-                  data-aos-delay={80 + projects.length * 10}
-                  className="relative flex items-center justify-center bg-gradient-to-br from-gray-50 to-white border-2 border-dashed border-gray-300 rounded-2xl overflow-hidden shadow-md transition-all duration-300 cursor-pointer group"
-                >
-                  <div className="flex flex-col items-center justify-center p-8 text-gray-500 transition-all duration-300 group-hover:text-sky-600">
-                    {/* Plus Icon with hover animation */}
-                    <FaPlus className="text-3xl transform transition-transform duration-300 group-hover:scale-125 group-hover:rotate-90 group-hover:drop-shadow-lg" />
-                    <p className="mt-3 text-sm font-semibold opacity-70 group-hover:opacity-100 transition-opacity duration-300">
-                      Add New Project
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -174,3 +157,7 @@ const Projects = () => {
 };
 
 export default Projects;
+
+
+
+
