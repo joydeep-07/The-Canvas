@@ -22,7 +22,6 @@ const AboutMe = () => {
   return (
     <div id="about" className="px-2 bg-white sm:px-6 md:px-0">
       <div className=" lg:col-span-2">
-        {/* Name */}
         <h1 class="wow-text text-xl sm:text-2xl text-black font-bold text-center tracking-tight md:text-left">
           I'M {" "}
           <span class="words">
@@ -37,7 +36,6 @@ const AboutMe = () => {
           MCA STUDENT & MERN DEVELOPER
         </p>
 
-        {/* Bio */}
         <p className="text-black/80 mb-4 text-sm sm:text-base leading-relaxed text-justify">
           Myself Joydeep, a motivated and dedicated learner with a strong
           academic foundation in computer applications. I successfully completed
@@ -64,7 +62,7 @@ const AboutMe = () => {
 
         {/* Contact Info */}
         <div className="flex flex-wrap justify-start pt-3 gap-2 sm:gap-3">
-          {/* Email */}
+
           <span className="flex items-center gap-2 cursor-pointer px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm">
             <Mail size={16} />
             joydeeprnp8821@gmail.com
