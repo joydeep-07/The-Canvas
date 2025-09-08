@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-// import "../style/custom.css";
 
 const CustomCursor = ({ icon: Icon, targetId }) => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -9,12 +8,12 @@ const CustomCursor = ({ icon: Icon, targetId }) => {
   const [velocity, setVelocity] = useState({ x: 0, y: 0 });
   const lastPos = useRef({ x: 0, y: 0 });
 
-  // Track mouse position + velocity
+
   useEffect(() => {
     const handleMouseMove = (e) => {
       setMousePos({ x: e.clientX, y: e.clientY });
 
-      // Check if hovering over target element
+     
       const targetElement = document.getElementById(targetId);
       if (targetElement) {
         const rect = targetElement.getBoundingClientRect();
