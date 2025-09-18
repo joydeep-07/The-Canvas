@@ -30,7 +30,7 @@ const Experience = () => {
           </h4>
         </div>
         <p className="text-gray-800 font-medium text-sm md:text-base">{role}</p>
-        <p className="text-gray-500 text-xs md:text-sm mb-4">{duration}</p>
+        {/* <p className="text-gray-500 text-xs md:text-sm mb-4">{duration}</p> */}
 
         <ul className="list-disc list-inside space-y-2 text-xs md:text-sm text-gray-700">
           {details.map((item, idx) => (
@@ -54,7 +54,7 @@ const Experience = () => {
         data-aos-delay="100"
         className="text-center md:text-left text-2xl md:text-4xl font-bold text-gray-800 mb-4"
       >
-        My Experiences & Works
+        Worked with Libraries in Projects
       </h1>
 
       {/* Subtitle */}
@@ -63,8 +63,7 @@ const Experience = () => {
         data-aos-delay="100"
         className="text-center md:text-center lg:text-left text-sm md:text-lg text-gray-600 italic mb-12 md:mb-16 px-2"
       >
-        "Experience is not what happens to you; it’s what you do with what
-        happens to you."
+        "Currently a fresher with no prior professional work experience."
       </p>
 
       <div className="w-full max-w-6xl mb-16 relative z-10">
