@@ -41,8 +41,7 @@ const AboutMe = () => {
           academic foundation in computer applications. I successfully completed
           my Bachelor of Computer Applications (BCA) from BB College, Asansol,
           which helped me build a solid base in programming, logic, and software
-          concepts. Currently, I am pursuing my Master of Computer Applications
-          (MCA) at Asansol Engineering College, where I am further enhancing my
+          concepts. Currently I am further enhancing my
           technical skills and diving deeper into advanced concepts of software
           development.
           <br /> <br />
