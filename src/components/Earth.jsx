@@ -185,7 +185,6 @@ const Earth = () => {
         </div>
       )}
 
-      {/* 3D Earth canvas only */}
       <div ref={mountRef} className="w-full h-[65vh]" />
 
       
