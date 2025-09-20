@@ -74,7 +74,6 @@ const Experience = () => {
               data-aos-delay="300"
               className="flex flex-col justify-center items-center min-h-[300px]"
             >
-              {/* ✅ Lottie animation responsive */}
               <Lottie
                 animationData={emptyAnimation}
                 loop={true}
