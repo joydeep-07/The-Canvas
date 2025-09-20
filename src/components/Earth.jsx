@@ -143,7 +143,7 @@ const Earth = () => {
     window.addEventListener("resize", onResize);
     onResize();
 
-    // ===== Animation loop =====
+    // ===== Animation =====
     const animate = () => {
       requestAnimationFrame(animate);
 
