@@ -8,9 +8,7 @@ const Earth = () => {
   useEffect(() => {
     if (!mountRef.current) return;
 
-
     const scene = new THREE.Scene();
-    // scene.background = new THREE.Color("#ffffff");
 
     const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 2000);
     camera.position.set(0, 0, 3.2);
@@ -178,30 +176,29 @@ const Earth = () => {
     };
   }, []);
 
- return (
-   <div className="relative w-full flex flex-col items-center">
-     {loading && (
-       <div className="absolute inset-0 flex flex-col items-center justify-center bg-white z-50 transition-opacity duration-700">
-         <div className="w-12 h-12 border-4 border-slate-300 border-t-cyan-400 rounded-full animate-spin mb-4"></div>
-         <p className="text-sm opacity-70">Loading Earth textures...</p>
-       </div>
-     )}
+  return (
+    <div className="relative w-full flex flex-col items-center">
+      {loading && (
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-white z-50 transition-opacity duration-700">
+          <div className="w-12 h-12 border-4 border-slate-300 border-t-cyan-400 rounded-full animate-spin mb-4"></div>
+          <p className="text-sm opacity-70">Loading Earth textures...</p>
+        </div>
+      )}
 
-     {/* 3D Earth canvas only */}
-     <div ref={mountRef} className="w-full h-[65vh]" />
+      {/* 3D Earth canvas only */}
+      <div ref={mountRef} className="w-full h-[65vh]" />
 
-     {/* Text BELOW Earth */}
-     <div className="mt-6 text-center">
-       <h3 className="text-2xl font-bold text-gray-800 drop-shadow-md tracking-wide">
-         EXPLORE THE 3D EARTH
-       </h3>
-       <p className="text-sky-600 font-mono text-sm sm:text-base mt-1">
-         POWERED BY THREE JS
-       </p>
-     </div>
-   </div>
- );
-
+      {/* Text BELOW Earth */}
+      <div className="mt-6 text-center">
+        <h3 className="text-2xl font-bold text-gray-800 drop-shadow-md tracking-wide">
+          EXPLORE THE 3D EARTH
+        </h3>
+        <p className="text-sky-600 font-mono text-sm sm:text-base mt-1">
+          POWERED BY THREE JS
+        </p>
+      </div>
+    </div>
+  );
 };
 
 export default Earth;
