@@ -153,7 +153,7 @@ const Earth = () => {
       earthGroup.rotation.y = rot.y;
       earthGroup.rotation.x = rot.x;
 
-      // Auto slow spin
+      // Auto spin
       targetRot.y += 0.0008;
 
       clouds.rotation.y += 0.0015;
