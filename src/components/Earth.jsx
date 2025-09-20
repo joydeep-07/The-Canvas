@@ -188,7 +188,7 @@ const Earth = () => {
       {/* 3D Earth canvas only */}
       <div ref={mountRef} className="w-full h-[65vh]" />
 
-      {/* Text BELOW Earth */}
+      
       <div className="mt-6 text-center">
         <h3 className="text-2xl font-bold text-gray-800 drop-shadow-md tracking-wide">
           EXPLORE THE 3D EARTH
