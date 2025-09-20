@@ -8,7 +8,7 @@ const Earth = () => {
   useEffect(() => {
     if (!mountRef.current) return;
 
-    // ===== Scene setup =====
+
     const scene = new THREE.Scene();
     // scene.background = new THREE.Color("#ffffff");
 
