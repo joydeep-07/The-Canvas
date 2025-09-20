@@ -15,7 +15,7 @@ const Earth = () => {
 
     const renderer = new THREE.WebGLRenderer({
       antialias: true,
-      alpha: true, // ✅ allow transparency
+      alpha: true, 
       powerPreference: "high-performance",
     });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
