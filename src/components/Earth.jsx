@@ -94,7 +94,7 @@ const Earth = () => {
     const clouds = new THREE.Mesh(cloudsGeo, cloudsMat);
     earthGroup.add(clouds);
 
-    // ===== Interactions (drag only, no zoom) =====
+    // ===== Drag Animation =====
     let isDragging = false;
     let last = { x: 0, y: 0 };
     const rot = { x: 0, y: 0 };
