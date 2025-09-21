@@ -1,5 +1,6 @@
 import React from "react";
 import "../style/Landing.css";
+import { SiMongodb, SiExpress, SiReact, SiNodedotjs } from "react-icons/si";
 
 const LandingPage = () => {
   return (
@@ -10,19 +11,27 @@ const LandingPage = () => {
       {/* Main heading */}
       <div>
         <h1 className="main-heading">
-          <span className="heading-black">Web Designer</span>
-          <span className="heading-outline">& Web Developer</span>
+          <span className="heading-black">Web  Developer</span>
+          <span className="heading-outline">& Programmer</span>
         </h1>
 
-        {/* Location */}
+        {/* Location & Tech Stack */}
         <p className="location">
           <span>Based in Kolkata, India.</span>
           <span>
             <ul className="tech-stack">
-              <li>Mongo Db</li>
-              <li>Express Js</li>
-              <li>React Js</li>
-              <li>Node Js</li>
+              <li className="tech text-[#47A248] ">
+                <SiMongodb color="#47A248" size={18} /> MongoDB
+              </li>
+              <li className="tech text-[#000000]">
+                <SiExpress color="#000000" size={18} /> Express.js
+              </li>
+              <li className="tech text-[#61DAFB]">
+                <SiReact color="#61DAFB" size={18} /> React.js
+              </li>
+              <li className="tech text-[#339933]">
+                <SiNodedotjs color="#339933" size={18} /> Node.js
+              </li>
             </ul>
           </span>
         </p>
