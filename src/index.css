@@ -30,10 +30,3 @@
   object-position: 0 35%; 
 }
 
-
-
-/* <<<========================== Text Outline (Landing Page.jsx) =================== >>> */
-.stroke-text {
-  -webkit-text-stroke: 2px black;
-  color: transparent;
-}
