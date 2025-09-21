@@ -6,6 +6,7 @@ import Experience from "../components/Experience";
 import { ArrowUp } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import LandingPage from "../components/LandingPage";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -68,7 +69,8 @@ const Home = () => {
 
   return (
     <div>
-      <Hero />
+      {/* <Hero /> */}
+      <LandingPage/>
       <Qualification />
       <Projects />
       <Experience />
