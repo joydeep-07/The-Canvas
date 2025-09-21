@@ -20,5 +20,10 @@
 }
 
 .spin-slow {
-  animation: spin-slow 5s linear infinite; /* adjust 5s */
+  animation: spin-slow 5s linear infinite; 
+}
+
+
+.object{
+  object-position: 0 35%; 
 }

@@ -52,15 +52,15 @@ const Qualification = () => {
       >
         <div className="relative">
           {/* Spinning Gradient Border */}
-          <div className="absolute inset-0 rounded-full p-[4px] bg-gradient-to-r from-[#F58529] via-[#DD2A7B] to-[#8134AF] spin-slow"></div>
+          {/* <div className="absolute inset-0 rounded-full p-[4px] bg-gradient-to-r from-[#F58529] via-[#DD2A7B] to-[#8134AF] spin-slow"></div> */}
 
           {/* Inner White Circle to mask spinning */}
-          <div className="relative rounded-full p-[4px]">
+          <div className="relative  rounded-xl p-[4px]">
             <img
               src={img1}
               loading="lazy"
               alt="Qualification"
-              className="rounded-full shadow-xl h-36 w-36 sm:h-44 sm:w-44 object-cover"
+              className="rounded-xl shadow-xl h-65 w-92 sm:h-44 sm:w-44 object object-cover"
             />
           </div>
         </div>
