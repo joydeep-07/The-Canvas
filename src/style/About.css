@@ -1,13 +1,29 @@
+.container {
+  padding: 1rem;
+  padding-left: 0;
+}
+
 .wow-text {
   font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  line-height: 1.2;
 }
+
+@media (min-width: 1024px) {
+  .wow-text {
+    text-align: left;
+  }
+}
+
 
 .wow-text .words {
   position: relative;
   display: inline-block;
-  height: 2.1rem; /* height of one word */
+  height: 2.1rem;
   overflow: hidden;
   color: #ff8800;
+  vertical-align: top;
 }
 
 .wow-text .words span {
@@ -26,4 +42,22 @@
   75%  { transform: translateY(-300%); }
   95%  { transform: translateY(-300%); }
   100% { transform: translateY(-400%); }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 640px) {
+  .wow-text {
+    font-size: 1.75rem;
+    text-align: left;
+    white-space: nowrap;
+  }
+  
+  .wow-text .words {
+    height: 1.9rem;
+    margin-left: -2px;
+  }
+  
+  .wow-text .words span {
+    line-height: 2.2rem;
+  }
 }

@@ -22,17 +22,19 @@ const AboutMe = () => {
   return (
     <div id="about" className="px-2 bg-white sm:px-6 md:px-0">
       <div className=" lg:col-span-2">
-        <h1 class="wow-text text-xl sm:text-2xl text-black font-bold text-center tracking-tight md:text-left">
-          I'M {" "}
-          <span class="words">
-            <span>JOYDEEP</span>
-            <span> A DEVELOPER</span>
-            <span> A PROGRAMMER</span>
-            <span> A DESIGNER</span>
-          </span>
-        </h1>
+        <div class="container">
+          <h1 class="wow-text text-xl sm:text-2xl text-black font-bold tracking-tight md:text-left">
+            I'M{" "}
+            <span class="words">
+              <span>JOYDEEP</span>
+              <span>A DEVELOPER</span>
+              <span>A PROGRAMMER</span>
+              <span>A DESIGNER</span>
+            </span>
+          </h1>
+        </div>
 
-        <p className="text-sky-600 font-mono text-xs sm:text-sm mb-4 text-center md:text-left">
+        <p className="text-sky-600 font-mono text-xs sm:text-sm mb-4 text-left md:text-left">
           MCA STUDENT & MERN DEVELOPER
         </p>
 
@@ -41,9 +43,8 @@ const AboutMe = () => {
           academic foundation in computer applications. I successfully completed
           my Bachelor of Computer Applications (BCA) from BB College, Asansol,
           which helped me build a solid base in programming, logic, and software
-          concepts. Currently I am further enhancing my
-          technical skills and diving deeper into advanced concepts of software
-          development.
+          concepts. Currently I am further enhancing my technical skills and
+          diving deeper into advanced concepts of software development.
           <br /> <br />
           I have always been deeply interested in programming, software
           development, and emerging technologies, which drives me to constantly
@@ -61,7 +62,6 @@ const AboutMe = () => {
 
         {/* Contact Info */}
         <div className="flex flex-wrap justify-start pt-3 gap-2 sm:gap-3">
-
           <span className="flex items-center gap-2 cursor-pointer px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm">
             <Mail size={16} />
             joydeeprnp8821@gmail.com
