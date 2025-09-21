@@ -23,6 +23,8 @@
   animation: spin-slow 5s linear infinite; 
 }
 
+/* <<<========================== Spinning Animation (Qualification.jsx) =================== >>> */
+
 
 .object{
   object-position: 0 35%; 
