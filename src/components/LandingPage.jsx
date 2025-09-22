@@ -4,23 +4,27 @@ import { SiMongodb, SiExpress, SiReact, SiNodedotjs } from "react-icons/si";
 
 const LandingPage = () => {
   return (
-    <div className="landing-container">
-      {/* Intro text */}
-      <p className="intro-text">Hi, myself Paul and I am a freelancer !</p>
+    <div className="main">
+      <div className="landing-container">
+        {/* Intro text */}
+        <p className="intro-text">Hi, myself Paul and I am a freelancer !</p>
 
-      {/* Main heading */}
-      <div>
-        <h1 className="main-heading">
-          <span className="heading-black">Web  Developer</span>
-          <span className="heading-outline">& Programmer</span>
-        </h1>
+        {/* Main heading */}
+        <div className="heading-container">
+          <h1 className="main-heading">
+            <span className="heading-black">Web Developer</span>
+            <span className="heading-outline">& Programmer</span>
+          </h1>
 
-        {/* Location & Tech Stack */}
-        <p className="location">
-          <span>Based in Kolkata, India.</span>
-          <span>
+          {/* Location & Tech Stack */}
+          <div className="location-tech-container">
+            <p className="intro-text2">
+              Hi, myself Paul and I am a freelancer !
+            </p>
+
+            <p className="location">Based in Kolkata, India.</p>
             <ul className="tech-stack">
-              <li className="tech text-[#47A248] ">
+              <li className="tech text-[#47A248]">
                 <SiMongodb color="#47A248" size={18} /> MongoDB
               </li>
               <li className="tech text-[#000000]">
@@ -33,8 +37,8 @@ const LandingPage = () => {
                 <SiNodedotjs color="#339933" size={18} /> Node.js
               </li>
             </ul>
-          </span>
-        </p>
+          </div>
+        </div>
       </div>
     </div>
   );
