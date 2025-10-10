@@ -18,7 +18,7 @@ const qualifications = [
     institution: "BB College, Asansol",
     year: "(2022 - 2025)",
     description:
-      "Pursued a comprehensive undergraduate program in Computer Applications, where I learned core subjects such as C, C++, Data Structures, DBMS, Java, Computer Architecture, and Web Technologies including HTML and CSS. Throughout this journey, I worked on multiple projects that strengthened my programming, database management, and problem-solving skills. This experience built a strong academic foundation and prepared me for advanced studies and real-world software development.",
+      "I completed an extensive undergraduate program in Computer Applications, gaining a strong foundation in core subjects such as C, C++, Data Structures, DBMS, Java, Computer Architecture, and Web Technologies like HTML and CSS. During this period, I developed and contributed to several projects that enhanced my programming, database management, and problem-solving abilities. These experiences not only solidified my technical expertise but also prepared me for advanced studies and real-world challenges in software development.",
   },
   {
     title: "Full Stack Web Development (MERN)",
