@@ -11,7 +11,7 @@ const qualifications = [
     institution: "DAV Public School, Rupnarayanpur",
     year: "(2021 - 2022)",
     description:
-      "Since I was weak in Mathematics, I chose the Commerce stream with Computer Science as my specialization. During this time, I discovered a deep interest in Computer Science, inspired by my teachers, Miss Soma Sinha and Subrata Mukherjee Sir. Their guidance not only sparked my curiosity but also motivated me to explore programming and technology, which ultimately laid the foundation for pursuing a Bachelor of Computer Applications (BCA).",
+      "During my higher secondary education, I chose the Commerce stream with Computer Science as my specialization. It was during this time that I discovered a deep passion for Computer Science, inspired by my teachers, Miss Soma Sinha and Subrata Mukherjee Sir. Their mentorship sparked my curiosity and motivated me to explore programming and technology, which ultimately led me to pursue a Bachelor of Computer Applications (BCA).",
   },
   {
     title: "Bachelor of Computer Applications (BCA)",
