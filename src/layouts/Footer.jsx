@@ -13,7 +13,8 @@ const Footer = () => {
                 THE CANVAS
               </h2>
               <p className="text-sm text-gray-400">
-                MERN Stack Developer crafting modern, scalable web applications.
+                Passionate MERN Stack Developer creating seamless digital
+                experiences.
               </p>
             </div>
 
