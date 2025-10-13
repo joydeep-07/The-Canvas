@@ -81,7 +81,7 @@ const Qualification = () => {
             <div
               key={index}
               data-aos="fade-up"
-              data-aos-delay={100 + index * 10} // stagger effect
+              data-aos-delay={100 + index * 10}
               className="px-2 py-6 flex flex-col gap-2 md:flex-row md:items-center justify-between transition-transform "
             >
               <div className="md:w-full">
