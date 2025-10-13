@@ -4,7 +4,7 @@ const qualifications = [
     institution: "DAV Public School, Rupnarayanpur",
     year: "(2019 - 2020)",
     description:
-      "During my secondary education, Mathematics initially posed a challenge for me, and I often found it difficult to perform as well as I wanted. Nevertheless, I stayed determined and consistently put in the effort to improve while excelling in subjects like Physics, Chemistry, and Computer Science. This experience strengthened my resilience and discipline, teaching me the value of persistence and hard work—qualities that later became essential in building a strong academic foundation for my higher studies in computer applications.",
+      "During my secondary education, Mathematics initially posed a challenge for me, and I often found it difficult to perform as well as I wanted. Nevertheless, I stayed determined and consistently put in the effort to improve while excelling in subjects like Physics, Chemistry, and Computer Science. This experience strengthened my resilience and discipline, teaching me the value of persistence and hard work qualities that later became essential in building a strong academic foundation for my higher studies in computer applications.",
   },
   {
     title: "Higher Secondary Education (HS)",
