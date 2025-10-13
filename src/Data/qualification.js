@@ -27,13 +27,13 @@ const qualifications = [
     description:
       "Developed a strong interest in web development during my BCA journey and pursued MERN stack training under the guidance of Debsis Sir. Learned to build modern, dynamic, and responsive web applications using MongoDB, Express.js, React, and Node.js. Gained hands-on experience with API integration, version control (Git & GitHub), authentication, deployment, and best practices in performance and security. This training refined my skills as a full-stack developer and motivated me to create impactful real-world projects.",
   },
-  // {
-  //   title: "Master of Computer Applications (MCA)",
-  //   institution: "Asansol Engineering College",
-  //   year: "(2025 - 2027)",
-  //   description:
-  //     "Currently pursuing a postgraduate program in Computer Applications, with a focus on advanced concepts in MERN stack development, cloud computing, and modern software architectures. Actively working on practical projects involving real-time applications, REST APIs, and full-stack solutions. Building expertise in React, Node.js, Express, and MongoDB while also exploring DevOps practices and scalable system design to prepare for a professional career in software development.",
-  // },
+  {
+    title: "Master of Computer Applications (MCA)",
+    institution: "Asansol Engineering College",
+    year: "(2025 - 2027)",
+    description:
+      "Currently pursuing a postgraduate program in Computer Applications, with a focus on advanced concepts in MERN stack development, cloud computing, and modern software architectures. Actively working on practical projects involving real-time applications, REST APIs, and full-stack solutions. Building expertise in React, Node.js, Express, and MongoDB while also exploring DevOps practices and scalable system design to prepare for a professional career in software development.",
+  },
 ];
 
 export default qualifications;
