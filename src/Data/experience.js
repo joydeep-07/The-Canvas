@@ -9,16 +9,16 @@ const experience = [
       "Optimized animation timelines for responsiveness across devices.",
     ],
   },
-  {
-    company: "Three.js",
-    role: "3D Visuals & Interactive Elements",
-    duration: "Project Work - 2024",
-    details: [
-      "Integrated 3D models and interactive visual elements into web projects.",
-      "Created immersive user experiences using WebGL rendering.",
-      "Worked on optimizing heavy 3D assets for better performance.",
-    ],
-  },
+  // {
+  //   company: "Three.js",
+  //   role: "3D Visuals & Interactive Elements",
+  //   duration: "Project Work - 2024",
+  //   details: [
+  //     "Integrated 3D models and interactive visual elements into web projects.",
+  //     "Created immersive user experiences using WebGL rendering.",
+  //     "Worked on optimizing heavy 3D assets for better performance.",
+  //   ],
+  // },
   {
     company: "Framer Motion",
     role: "React Motion & Gesture Animations",
