@@ -70,7 +70,7 @@ const experience = [
     ],
   },
   {
-    company: "Tailwind CSS & Shadcn/UI",
+    company: "Tailwind CSS",
     role: "Modern UI Styling & Component Customization",
     duration: "Ongoing - 2024 to Present",
     details: [
