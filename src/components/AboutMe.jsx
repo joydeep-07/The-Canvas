@@ -24,7 +24,7 @@ const AboutMe = () => {
       <div className=" lg:col-span-2">
         <div class="container">
           <h1 class="wow-text text-xl sm:text-2xl text-black font-bold tracking-tight md:text-left">
-            I'M{" "}
+            MYSELF{" "}
             <span class="words">
               <span>JOYDEEP</span>
               <span>A DEVELOPER</span>
