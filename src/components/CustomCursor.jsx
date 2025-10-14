@@ -88,5 +88,4 @@ const CustomCursor = ({ icon: Icon, targetId }) => {
 export default CustomCursor;
 
 // use like this
-
 //  <CustomCursor icon={CiPlay1} targetId="video" />
