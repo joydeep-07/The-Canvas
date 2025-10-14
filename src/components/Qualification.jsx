@@ -6,7 +6,7 @@ import AboutMe from "./AboutMe.jsx";
 import "aos/dist/aos.css";
 import Aos from "aos";
 import "../index.css";
-import ScratchCard from "./ScratchCard.jsx"; 
+import ScratchCard from "./ScratchCard.jsx";
 import CustomCursor from "./CustomCursor.jsx";
 import { Eraser } from "lucide-react";
 
@@ -51,9 +51,6 @@ const Qualification = () => {
         className="flex justify-center w-full mb-8 md:hidden"
       >
         <div className="relative">
-          {/* Spinning Gradient Border */}
-          {/* <div className="absolute inset-0 rounded-full p-[4px] bg-gradient-to-r from-[#F58529] via-[#DD2A7B] to-[#8134AF] spin-slow"></div> */}
-
           {/* Inner White Circle to mask spinning */}
           <div className="relative  rounded-xl p-[4px]">
             <img
