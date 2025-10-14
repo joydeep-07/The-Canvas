@@ -66,29 +66,49 @@ const Experience = () => {
         "Currently a fresher with no prior professional work experience."
       </p>
 
-      <div className="w-full max-w-8xl mb-16 relative z-10">
-        <div className="p-4 sm:p-6 md:p-8 lg:p-10">
-          {isFresher ? (
-            <div
-              data-aos="zoom-in"
-              data-aos-delay="300"
-              className="flex flex-col justify-center items-center min-h-[300px]"
-            >
-              <Lottie
-                animationData={emptyAnimation}
-                loop={true}
-                className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80"
-              />
-            </div>
-          ) : (
-            <div className="grid p-6 grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              {experience.map((job, index) => (
-                <ExperienceCard key={index} index={index} {...job} />
-              ))}
-            </div>
-          )}
-        </div>
+      <div className="w-full max-w-[90rem] mx-auto mb-16 relative z-10">
+  <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-6 sm:py-8 md:py-10">
+    {isFresher ? (
+      <div
+        data-aos="zoom-in"
+        data-aos-delay="300"
+        className="flex flex-col justify-center items-center min-h-[300px] sm:min-h-[400px] md:min-h-[500px]"
+      >
+        <Lottie
+          animationData={emptyAnimation}
+          loop={true}
+          className="w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96"
+        />
       </div>
+    ) : (
+      <div
+        className="
+          grid 
+          grid-cols-1 
+          sm:grid-cols-2 
+          lg:grid-cols-3 
+          gap-6 
+          sm:gap-8 
+          lg:gap-10 
+          xl:gap-12
+          place-items-center
+        "
+      >
+        {experience.map((job, index) => (
+          <div
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+            className="w-full max-w-[400px]"
+            key={index}
+          >
+            <ExperienceCard index={index} {...job} />
+          </div>
+        ))}
+      </div>
+    )}
+  </div>
+</div>
+
     </div>
   );
 };
