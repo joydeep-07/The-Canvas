@@ -30,12 +30,12 @@ const experience = [
     ],
   },
   {
-    company: "React.js & Next.js",
+    company: "React.js",
     role: "Frontend Development & Component Architecture",
     duration: "Ongoing - 2023 to Present",
     details: [
       "Built reusable and modular components using React hooks and context API.",
-      "Implemented dynamic routing and server-side rendering with Next.js.",
+      "Managed state effectively with Redux Toolkit for complex applications.",
       "Focused on responsive design, accessibility, and SEO optimization.",
     ],
   },
