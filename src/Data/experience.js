@@ -9,16 +9,6 @@ const experience = [
       "Optimized animation timelines for responsiveness across devices.",
     ],
   },
-  // {
-  //   company: "Three.js",
-  //   role: "3D Visuals & Interactive Elements",
-  //   duration: "Project Work - 2024",
-  //   details: [
-  //     "Integrated 3D models and interactive visual elements into web projects.",
-  //     "Created immersive user experiences using WebGL rendering.",
-  //     "Worked on optimizing heavy 3D assets for better performance.",
-  //   ],
-  // },
   {
     company: "Framer Motion",
     role: "React Motion & Gesture Animations",
@@ -37,6 +27,66 @@ const experience = [
       "Used Locomotive Scroll for smooth scrolling and parallax effects.",
       "Implemented AOS (Animate on Scroll) for lightweight reveal animations.",
       "Focused on creating modern, interactive, and aesthetic websites.",
+    ],
+  },
+  {
+    company: "React.js & Next.js",
+    role: "Frontend Development & Component Architecture",
+    duration: "Ongoing - 2023 to Present",
+    details: [
+      "Built reusable and modular components using React hooks and context API.",
+      "Implemented dynamic routing and server-side rendering with Next.js.",
+      "Focused on responsive design, accessibility, and SEO optimization.",
+    ],
+  },
+  {
+    company: "Node.js & Express.js",
+    role: "Backend Development & REST API Integration",
+    duration: "Ongoing - 2023 to Present",
+    details: [
+      "Developed secure REST APIs for authentication and CRUD operations.",
+      "Integrated JWT-based authentication and middleware for role-based access.",
+      "Handled server-side logic and data flow between frontend and backend.",
+    ],
+  },
+  {
+    company: "MongoDB & Mongoose",
+    role: "Database Design & Data Modeling",
+    duration: "Ongoing - 2023 to Present",
+    details: [
+      "Designed and optimized MongoDB schemas using Mongoose.",
+      "Implemented aggregation pipelines and query optimization.",
+      "Ensured data validation, indexing, and efficient CRUD operations.",
+    ],
+  },
+  {
+    company: "Nodemailer & EmailJS",
+    role: "Email Communication & Notifications",
+    duration: "Project Work - 2024",
+    details: [
+      "Integrated email verification and password recovery systems.",
+      "Configured custom email templates for admin notifications.",
+      "Enhanced UX by automating real-time mail responses.",
+    ],
+  },
+  {
+    company: "Tailwind CSS & Shadcn/UI",
+    role: "Modern UI Styling & Component Customization",
+    duration: "Ongoing - 2024 to Present",
+    details: [
+      "Used Tailwind CSS for building responsive and clean UIs rapidly.",
+      "Customized Shadcn components to maintain consistent design systems.",
+      "Implemented dark mode and accessibility-friendly color themes.",
+    ],
+  },
+  {
+    company: "Firebase",
+    role: "Authentication & Media Management",
+    duration: "Project Work - 2024",
+    details: [
+      "Integrated Firebase authentication for secure user logins.",
+      "Used Cloudinary for optimized image storage and delivery.",
+      "Improved performance with lazy loading and CDN caching.",
     ],
   },
 ];
