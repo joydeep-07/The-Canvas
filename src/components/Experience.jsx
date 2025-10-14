@@ -66,7 +66,7 @@ const Experience = () => {
         "Currently a fresher with no prior professional work experience."
       </p>
 
-      <div className="w-full max-w-6xl mb-16 relative z-10">
+      <div className="w-full max-w-8xl mb-16 relative z-10">
         <div className="p-4 sm:p-6 md:p-8 lg:p-10">
           {isFresher ? (
             <div
@@ -81,7 +81,7 @@ const Experience = () => {
               />
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className="grid p-6 grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {experience.map((job, index) => (
                 <ExperienceCard key={index} index={index} {...job} />
               ))}
