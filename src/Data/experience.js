@@ -60,7 +60,7 @@ const experience = [
     ],
   },
   {
-    company: "Nodemailer & EmailJS",
+    company: "Nodemailer",
     role: "Email Communication & Notifications",
     duration: "Project Work - 2024",
     details: [
