@@ -43,7 +43,7 @@ const LandingPage = () => {
           {/* Left Text Section */}
           <div className="text md:pl-20" data-aos="fade-up">
             <h1 className="uppercase text-lg font-medium text-amber-500 tracking-widest mb-2">
-              MERN Stack Developer, Building Ideas into Reality
+              MERN Developer, Building Ideas into Reality
             </h1>
             <h1 className="text-5xl md:text-6xl font-serif text-gray-800 drop-shadow-md">
               The Art of Code a Digital <br /> Symphony of Ideas & Innovation
