@@ -62,7 +62,7 @@ const LandingPage = () => {
 
             {/* Button placed below text */}
             <div
-              className="pt-6 sm:pt-8"
+              className="pt-6 sm:pt-8 flex justify-start"
               data-aos="zoom-in"
               data-aos-delay="400"
             >
@@ -72,11 +72,11 @@ const LandingPage = () => {
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></span>
 
-                <span className="relative flex items-center justify-center">
+                <span className="relative flex items-center justify-start space-x-2">
                   <span className="opacity-100 group-hover:opacity-0 translate-y-0 group-hover:-translate-y-2 transition-all duration-500 flex items-center space-x-2">
                     <span>ABOUT ME &</span>
                   </span>
-                  <span className="absolute inset-0 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 flex items-center justify-center space-x-2">
+                  <span className="absolute inset-0 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 flex items-center justify-start space-x-2">
                     <span>MY WORKS</span>
                   </span>
                 </span>
