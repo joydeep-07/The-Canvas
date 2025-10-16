@@ -56,6 +56,23 @@ const LandingPage = () => {
             </p>
           </div>
         </div>
+        <div data-aos="zoom-in" data-aos-delay="600">
+          <button
+            className="px-10 sm:px-14 py-4 sm:py-6 bg-transparent border border-gray-900/20 text-gray-100 font-medium tracking-widest rounded-md hover:border-gray-700 transition-all duration-700 group relative overflow-hidden"
+            onClick={scrollToSection}
+          >
+            <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 -translate-x-full group-hover:translate-x-0"></span>
+
+            <span className="relative w-36 sm:w-40 flex items-center justify-center">
+              <span className="opacity-100 group-hover:opacity-0 text-gray-700 translate-y-0 group-hover:-translate-y-2 transition-all duration-500 flex items-center space-x-3">
+                <span>ABOUT ME &</span>
+              </span>
+              <span className="absolute inset-0 text-gray-700 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 flex items-center justify-center space-x-3">
+                <span>MY WORKS</span>
+              </span>
+            </span>
+          </button>
+        </div>
       </div>
 
       {/* Scroll Indicator */}
