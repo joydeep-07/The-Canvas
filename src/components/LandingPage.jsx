@@ -48,7 +48,7 @@ const LandingPage = () => {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-gray-800 drop-shadow-md leading-tight">
               The Art of Code a Digital <br /> Symphony of Ideas & Innovation
             </h1>
-            <p className="max-w-lg pt-5 text-gray-700 leading-relaxed">
+            <p className="max-w-2xl pt-5 text-gray-700 leading-relaxed">
               Driven MERN Stack Developer turning ideas into functional,
               beautiful web apps. Constantly exploring new technologies to
               deliver meaningful user experiences and impactful digital
