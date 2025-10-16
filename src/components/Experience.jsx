@@ -54,7 +54,7 @@ const Experience = () => {
         data-aos-delay="100"
         className="text-center md:text-left text-2xl md:text-4xl font-bold text-gray-800 mb-4"
       >
-        Worked with Libraries in Projects
+        Worked with these during Projects
       </h1>
 
       {/* Subtitle */}
