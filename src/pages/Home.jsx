@@ -69,8 +69,8 @@ const Home = () => {
 
   return (
     <div>
-      <Hero />
-      {/* <LandingPage/> */}
+      {/* <Hero /> */}
+      <LandingPage/>
       <Qualification />
       <Projects />
       <Experience />
