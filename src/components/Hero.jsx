@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { FiChevronDown } from "react-icons/fi";
-import video from "../assets/abstract.mp4";
+import video from "../assets/bg_video2.mp4";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
