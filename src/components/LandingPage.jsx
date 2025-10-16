@@ -41,19 +41,19 @@ const LandingPage = () => {
         <div className="wrapper max-w-7xl w-full flex flex-col md:flex-row items-center justify-between py-10">
           {/* Left Text Section */}
           <div
-            className="text md:pl-10 lg:pl-20 flex flex-col items-center md:items-start"
+            className="text md:pl-10 lg:pl-20 flex flex-col md:items-start"
             data-aos="fade-up"
           >
-            <h1 className="uppercase text-sm sm:text-base md:text-lg font-medium text-amber-500 tracking-widest mb-2">
-              MERN Developer, Building Ideas into Reality
+            <h1 className="uppercase pb-3 text-sm sm:text-base md:text-lg font-medium text-amber-500 tracking-widest mb-2 text-left">
+              MERN Developer
             </h1>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-gray-800 drop-shadow-md leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-left pb-10 font-serif text-gray-800 drop-shadow-md leading-tight">
               The Art of Code a Digital <br className="hidden sm:block" />{" "}
               Symphony of Ideas & Innovation
             </h1>
 
-            <p className="max-w-2xl pt-4 sm:pt-5 text-gray-700 text-sm sm:text-base leading-relaxed">
+            <p className="max-w-2xl pt-4 sm:pt-5 text-gray-700 text-sm sm:text-base text-justify leading-relaxed">
               Driven MERN Stack Developer turning ideas into functional,
               beautiful web apps. Constantly exploring new technologies to
               deliver meaningful user experiences and impactful digital
