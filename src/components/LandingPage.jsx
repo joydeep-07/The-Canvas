@@ -29,57 +29,41 @@ const LandingPage = () => {
           src={video}
           autoPlay
           muted
-          loop="true"
+          loop
           playsInline
-          loadling="lazy"
           className="w-full h-full object-cover"
         />
+        {/* Keep your original gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-white to-sky-600/40" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6 md:px-8">
-        <div className="max-w-6xl text-center space-y-6 sm:space-y-8 md:space-y-10">
-          {/* Headline */}
-          <h1
-            data-aos="fade-up"
-            data-aos-delay="200"
-            className="text-3xl sm:text-5xl md:text-7xl lg:text-7xl font-medium tracking-tighter"
-          >
-            <span
-              style={{ fontFamily: "CormorantGaramond" }}
-              className="bg-gradient-to-r from-gray-700 via-gray-900 to-gray-800 bg-clip-text text-transparent"
-            >
-              The Art of code a Digital Symphony of Ideas & Innovation
-            </span>
-          </h1>
+      {/* Text Section */}
+      <div className="relative pt-10 z-20 flex flex-col mt-20 mb-10 justify-center items-center px-6 text-center md:text-left">
+        <div className="wrapper max-w-8xl w-full flex flex-col md:flex-row items-center justify-between py-10">
+          {/* Left Text Section */}
+          <div className="text md:pl-20" data-aos="fade-up">
+            <h1 className="uppercase text-lg font-medium text-amber-500 tracking-widest mb-2">
+              MERN Stack Developer, Building Ideas into Reality
+            </h1>
+            <h1 className="text-5xl md:text-6xl font-serif text-gray-800 drop-shadow-md">
+              The Art of Code a Digital <br /> Symphony of Ideas & Innovation
+            </h1>
+            <p className="max-w-lg pt-5 text-gray-700 leading-relaxed">
+              We strive towards a simple but ambitious mission: to reform the
+              education system by offering world-class learning rooted in
+              experience and real-life application at a fraction of the cost of
+              traditional academic institutions.
+            </p>
 
-          {/* Subtitle */}
-          <h2
-            data-aos="fade-up"
-            data-aos-delay="400"
-            className="text-xs sm:text-md md:text-xl font-light tracking-wider text-gray-600 uppercase"
-          >
-            MERN Stack Developer, Building Ideas into Reality
-          </h2>
-
-          {/* CTA Button */}
-          <div data-aos="zoom-in" data-aos-delay="600">
-            <button
-              className="px-10 sm:px-14 py-4 sm:py-6 bg-transparent border border-gray-900/20 text-gray-100 font-medium tracking-widest rounded-md hover:border-gray-700 transition-all duration-700 group relative overflow-hidden"
-              onClick={scrollToSection}
-            >
-              <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 -translate-x-full group-hover:translate-x-0"></span>
-
-              <span className="relative w-36 sm:w-40 flex items-center justify-center">
-                <span className="opacity-100 group-hover:opacity-0 text-gray-700 translate-y-0 group-hover:-translate-y-2 transition-all duration-500 flex items-center space-x-3">
-                  <span>ABOUT ME &</span>
-                </span>
-                <span className="absolute inset-0 text-gray-700 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 flex items-center justify-center space-x-3">
-                  <span>MY WORKS</span>
-                </span>
-              </span>
-            </button>
+            {/* Buttons */}
+            <div className="pt-6 flex gap-4">
+              <button className="px-6 py-2 rounded-full bg-blue-500 text-white font-medium shadow-md hover:bg-blue-600 transition-all">
+                Join Now
+              </button>
+              <button className="px-6 py-2 rounded-full border-2 border-gray-400 hover:border-blue-500 hover:text-blue-500 font-medium transition-all">
+                Explore
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -88,9 +72,10 @@ const LandingPage = () => {
       <div
         data-aos="fade-in"
         data-aos-delay="500"
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-softBounce"
+        onClick={scrollToSection}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 cursor-pointer animate-softBounce"
       >
-        <FiChevronDown className="h-6 w-6 animate-bounce text-gray-800 opacity-80" />
+        <FiChevronDown className="h-6 w-6 animate-bounce text-gray-700 opacity-80" />
       </div>
     </div>
   );
