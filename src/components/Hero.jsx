@@ -30,7 +30,7 @@ const Hero = () => {
           src={video}
           autoPlay
           muted
-          loop
+          loop="true"
           playsInline
           loadling="lazy"
           className="w-full h-full object-cover"
