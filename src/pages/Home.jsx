@@ -7,6 +7,7 @@ import { ArrowUp } from "lucide-react";
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import LandingPage from "../components/LandingPage";
+import WhyMe from "../components/WhyMe";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -74,6 +75,7 @@ const Home = () => {
       <Qualification />
       <Projects />
       <Experience />
+      <WhyMe/>
 
       {/* Scroll to Top Button with Progress Ring */}
       <div
