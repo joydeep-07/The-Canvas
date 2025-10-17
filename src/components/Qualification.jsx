@@ -69,7 +69,7 @@ const Qualification = () => {
           <div
             data-aos="fade-up"
             data-aos-delay="400"
-            className="max-w-4xl mx-auto bg-gray-100"
+            className="max-w-5xl bg-gray-100"
           >
             <AboutMe />
           </div>
