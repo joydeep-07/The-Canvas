@@ -66,7 +66,7 @@ const Experience = () => {
         "Currently a fresher with no prior professional work experience."
       </p>
 
-      <div className="w-full max-w-[80rem] mx-auto mb-16 relative z-10">
+      <div className="w-full max-w-8xl mx-auto mb-16 relative z-10">
   <div className="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-6 sm:py-8 md:py-10">
     {isFresher ? (
       <div
