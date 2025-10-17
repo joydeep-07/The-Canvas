@@ -73,7 +73,7 @@ const Home = () => {
       {/* <LandingPage/> */}
       <Qualification />
       <Projects />
-      {/* <Experience /> */}
+      <Experience />
 
       {/* Scroll to Top Button with Progress Ring */}
       <div
