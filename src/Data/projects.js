@@ -15,14 +15,14 @@ const projects = [
     technologies: ["React", "Tailwind", "WebGL"],
     link: "https://lightloom.netlify.app/",
   },
-  {
-    id: 2,
-    name: "Solar Explorer",
-    description:
-      "Discover the wonders of our solar system with Solar Explorer – your gateway to planets, moons, and cosmic mysteries beyond",
-    technologies: ["HTML", "Css"],
-    link: "https://planet-explorer-css.netlify.app/",
-  },
+  // {
+  //   id: 2,
+  //   name: "Solar Explorer",
+  //   description:
+  //     "Discover the wonders of our solar system with Solar Explorer – your gateway to planets, moons, and cosmic mysteries beyond",
+  //   technologies: ["HTML", "Css"],
+  //   link: "https://planet-explorer-css.netlify.app/",
+  // },
   {
     id: 3,
     name: "GTA VI",
