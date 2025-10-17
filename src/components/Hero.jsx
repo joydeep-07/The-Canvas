@@ -40,11 +40,11 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6 md:px-8">
-        <div className="max-w-6xl text-center space-y-6 sm:space-y-8 md:space-y-10">
+        <div className="max-w-6xl text-center flex flex-col justify-center items-center space-y-6 sm:space-y-8 md:space-y-10">
           {/* Headline */}
           <h1
             data-aos="fade-up"
-            data-aos-delay="200"
+            data-aos-delay="100"
             className="text-3xl sm:text-5xl md:text-7xl lg:text-7xl font-medium tracking-tighter"
           >
             <span
@@ -55,14 +55,25 @@ const Hero = () => {
             </span>
           </h1>
 
+          <p
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="max-w-3xl leading-relaxed text-gray-700 text-sm sm:text-base md:text-lg"
+          >
+            Driven MERN Stack Developer turning ideas into functional, beautiful
+            web apps. Constantly exploring new technologies to deliver
+            meaningful user experiences and impactful digital solutions that
+            inspire and connect.
+          </p>
+
           {/* Subtitle */}
-          <h2
+          {/* <h2
             data-aos="fade-up"
             data-aos-delay="400"
             className="text-xs sm:text-md md:text-xl font-light tracking-wider text-gray-600 uppercase"
           >
             MERN Stack Developer, Building Ideas into Reality
-          </h2>
+          </h2> */}
 
           {/* CTA Button */}
           <div data-aos="zoom-in" data-aos-delay="600">
