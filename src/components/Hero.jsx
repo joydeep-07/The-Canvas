@@ -5,12 +5,11 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const Hero = () => {
-
   useEffect(() => {
     Aos.init({
-      duration: 700, 
+      duration: 700,
       easing: "ease-in-out",
-      once: true, 
+      once: true,
       offset: 100,
     });
   }, []);
@@ -65,15 +64,6 @@ const Hero = () => {
             meaningful user experiences and impactful digital solutions that
             inspire and connect.
           </p>
-
-          {/* Subtitle */}
-          {/* <h2
-            data-aos="fade-up"
-            data-aos-delay="400"
-            className="text-xs sm:text-md md:text-xl font-light tracking-wider text-gray-600 uppercase"
-          >
-            MERN Stack Developer, Building Ideas into Reality
-          </h2> */}
 
           {/* CTA Button */}
           <div data-aos="zoom-in" data-aos-delay="600">
