@@ -201,7 +201,7 @@ const Projects = () => {
           </div>,
         ]}
         velocity={100}
-        className="text-gray-600 bg-white  font-mono text-4xl"
+        className="text-gray-600 bg-white font-mono text-4xl"
       />
     </>
   );
