@@ -6,6 +6,8 @@ import "aos/dist/aos.css";
 import "../style/Circles.css"
 import Hero from "./Hero.jsx";
 import Earth from "./Earth.jsx";
+import ShinyText from "../../Reactbits/ShinyText/ShinyText.jsx";
+
 const Projects = () => {
   useEffect(() => {
     Aos.init({
@@ -55,7 +57,7 @@ const Projects = () => {
       id="projects"
       className="min-h-screen bg-white relative font-sans flex flex-col items-center tracking-wide py-20 px-5 md:px-10"
     >
-      <div className="w-full max-w-4xl px-4 flex items-start">
+      <div className="w-full max-w-6xl px-4 flex items-start">
         <div className="flex-1 text-center">
           <h1
             data-aos="fade-up"
@@ -64,14 +66,22 @@ const Projects = () => {
           >
             My Projects & Works
           </h1>
-          <p
+          {/* <p
             data-aos="fade-up"
             data-aos-delay="100"
             className="text-base md:text-lg text-gray-600 italic mb-10"
           >
             “The best way to predict the future is not to wait for it to happen,
             but to create it with vision, determination, and action.”
-          </p>
+          </p> */}
+
+          <ShinyText
+            text="The best way to predict the future is not to wait for it to happen,
+            but to create it with vision, determination, and action."
+            disabled={false}
+            speed={7}
+            className="text-center md:text-center lg:text-left text-sm md:text-lg text-gray-600 italic mb-12 md:mb-16 px-2"
+          />
         </div>
       </div>
 
