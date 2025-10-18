@@ -58,16 +58,14 @@ const Qualification = () => {
         data-aos-delay="100"
         className="flex justify-center w-full mb-8 md:hidden"
       >
-        <div className="relative">
-          {/* Inner White Circle to mask spinning */}
-          <div className="relative  rounded-xl p-[4px]">
-            <img
-              src={img1}
-              loading="lazy"
-              alt="Qualification"
-              className="rounded-xl shadow-xl h-65 w-92 sm:h-44 sm:w-44 object object-cover"
-            />
-          </div>
+        <div className="relative rounded-xl p-[4px] overflow-hidden h-[260px] w-92 sm:w-44 sm:h-[100px]">
+          <img
+            src={img1}
+            loading="lazy"
+            alt="Qualification"
+            className="rounded-xl shadow-xl w-full object-cover"
+            style={{ transform: "translateY(-130px)" }} // move image up to crop
+          />
         </div>
       </div>
 
