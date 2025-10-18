@@ -81,6 +81,14 @@ const Hero = () => {
       >
         <FiChevronDown className="h-6 w-6 animate-bounce text-gray-800 opacity-80" />
       </div>
+
+      {/* Bottom Fade */}
+      <div
+        className="absolute bottom-0 left-0 w-full h-[200px] pointer-events-none"
+        style={{
+          background: "linear-gradient(to top, white, transparent)",
+        }}
+      />
     </div>
   );
 };
