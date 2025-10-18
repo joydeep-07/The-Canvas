@@ -24,9 +24,23 @@ const AboutMe = () => {
   return (
     <div id="about" className="px-2 bg-white sm:px-6 md:px-0">
       <div className=" lg:col-span-2">
-        <h1 className="text-4xl flex font-bold mb-6">
+        <h1
+          className="
+    text-2xl
+    sm:text-3xl
+    md:text-4xl
+    lg:text-4xl
+    font-bold 
+    flex 
+    flex-wrap
+    items-center
+    justify-start
+    mb-6
+    text-left
+  "
+        >
           MYSELF
-          <span className="text-amber-500 ml-2">
+          <span className="text-orange-400 ml-2">
             <RotatingText
               texts={["JOYDEEP", "A DEVELOPER", "A PROGRAMMER", "A DESIGNER"]}
               typingSpeed={80}
