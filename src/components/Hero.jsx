@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { FiChevronDown } from "react-icons/fi";
-import video from "../assets/bg_video2.mp4";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import LiquidEther from "../../Reactbits/LiquidEther/LiquidEther";
 
 const Hero = () => {
   useEffect(() => {
@@ -16,31 +16,20 @@ const Hero = () => {
 
   const scrollToSection = () => {
     const section = document.getElementById("about");
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+    if (section) section.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div className="h-screen overflow-hidden relative">
-      {/* Video Background */}
+      {/* Liquid Ether Background */}
       <div className="absolute inset-0 z-0">
-        <video
-          src={video}
-          autoPlay
-          muted
-          loop="true"
-          playsInline
-          loadling="lazy"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-white to-sky-600/40" />
+        <LiquidEther />
+        <div className="absolute inset-0 bg-gradient-to-t from-white to-sky-600/40 mix-blend-overlay" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6 md:px-8">
         <div className="max-w-6xl text-center flex flex-col justify-center items-center space-y-6 sm:space-y-8 md:space-y-10">
-          {/* Headline */}
           <h1
             data-aos="fade-up"
             data-aos-delay="100"
@@ -65,14 +54,12 @@ const Hero = () => {
             inspire and connect.
           </p>
 
-          {/* CTA Button */}
           <div data-aos="zoom-in" data-aos-delay="600">
             <button
               className="px-10 sm:px-14 py-4 sm:py-6 bg-transparent border border-gray-900/20 text-gray-100 font-medium tracking-widest rounded-md hover:border-gray-700 transition-all duration-700 group relative overflow-hidden"
               onClick={scrollToSection}
             >
               <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/10 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 -translate-x-full group-hover:translate-x-0"></span>
-
               <span className="relative w-36 sm:w-40 flex items-center justify-center">
                 <span className="opacity-100 group-hover:opacity-0 text-gray-700 translate-y-0 group-hover:-translate-y-2 transition-all duration-500 flex items-center space-x-3">
                   <span>ABOUT ME &</span>
