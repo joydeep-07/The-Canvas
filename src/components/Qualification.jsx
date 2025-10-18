@@ -27,30 +27,30 @@ const Qualification = () => {
       className="min-h-screen bg-white flex flex-col items-center py-16 px-4 md:px-15"
     >
       {/* Section Title */}
-      {/* <h1
+      <h1
         data-aos="fade-up"
         data-aos-delay="100"
         className="text-center md:text-left text-2xl md:text-4xl font-bold text-gray-800 mb-4"
       >
         About Me & My Qualifications
-      </h1> */}
+      </h1>
 
-      <ShinyText
+      {/* <ShinyText
         text="About Me & My Qualifications"
         disabled={false}
         speed={7}
         className="text-center md:text-left text-2xl md:text-4xl font-bold text-gray-800 mb-4"
-      />
+      /> */}
 
       {/* Subtitle */}
-      <p
-        data-aos="fade-up"
-        data-aos-delay="100"
-        className="text-center md:text-center lg:text-left text-sm md:text-lg text-gray-600 italic mb-12 md:mb-16 px-2"
-      >
-        "Education is the passport to the future, for tomorrow belongs to those
+
+      <ShinyText
+        text="Education is the passport to the future, for tomorrow belongs to those
         who prepare for it today."
-      </p>
+        disabled={false}
+        speed={7}
+        className="text-center md:text-center lg:text-left text-sm md:text-lg text-gray-600 italic mb-12 md:mb-16 px-2"
+      />
 
       {/* Image for Mobile Screen */}
       <div
