@@ -40,9 +40,9 @@ const Projects = () => {
         </a>
       </div>
 
-      <div className="p-6 relative z-0">
+      <div className="p-4 relative z-0">
         <h4 className="text-xl font-semibold text-sky-600 mb-2">{name}</h4>
-        <p className="text-gray-700 text-sm mb-4">{description}</p>
+        <p className="text-gray-700 text-xs mb-4">{description}</p>
         <div className="flex flex-wrap gap-2">
           {technologies.map((tech, index) => (
             <span
