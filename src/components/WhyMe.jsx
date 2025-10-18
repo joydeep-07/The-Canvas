@@ -2,7 +2,6 @@ import React from "react";
 import CircularGallery from "../../Reactbits/CircularGallery/CircularGallery.jsx";
 
 const WhyMe = () => {
-  // 👇 Use your own image URLs here
   const myGalleryItems = [
     {
       image: "https://picsum.photos/id/1011/800/600",

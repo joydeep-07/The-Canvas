@@ -72,7 +72,7 @@ const Home = () => {
       <Hero />
       {/* <LandingPage/> */}
       <Qualification />
-      <WhyMe />
+      {/* <WhyMe /> */}
       <Projects />
       <Experience />
 
