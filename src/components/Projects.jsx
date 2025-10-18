@@ -8,6 +8,8 @@ import Hero from "./Hero.jsx";
 import Earth from "./Earth.jsx";
 import ShinyText from "../../Reactbits/ShinyText/ShinyText.jsx";
 import SpotlightCard from "../../Reactbits/SpotlightCard/SpotlightCard.jsx";
+import ScrollVelocity from "../../Reactbits/ScrollVelocity/ScrollVelocity.jsx";
+import { SiMongodb, SiExpress, SiReact, SiNodedotjs } from "react-icons/si";
 
 const Projects = () => {
   useEffect(() => {
@@ -58,20 +60,21 @@ const Projects = () => {
   );
 
   return (
-    <div
-      id="projects"
-      className="min-h-screen bg-white relative font-sans flex flex-col items-center tracking-wide py-20 px-5 md:px-10"
-    >
-      <div className="w-full max-w-6xl px-4 flex items-start">
-        <div className="flex-1 text-center">
-          <h1
-            data-aos="fade-up"
-            data-aos-delay="100"
-            className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
-          >
-            My Projects & Works
-          </h1>
-          {/* <p
+    <>
+      <div
+        id="projects"
+        className="min-h-screen bg-white relative font-sans flex flex-col items-center tracking-wide py-20 px-5 md:px-10"
+      >
+        <div className="w-full max-w-6xl px-4 flex items-start">
+          <div className="flex-1 text-center">
+            <h1
+              data-aos="fade-up"
+              data-aos-delay="100"
+              className="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
+            >
+              My Projects & Works
+            </h1>
+            {/* <p
             data-aos="fade-up"
             data-aos-delay="100"
             className="text-base md:text-lg text-gray-600 italic mb-10"
@@ -80,94 +83,127 @@ const Projects = () => {
             but to create it with vision, determination, and action.”
           </p> */}
 
-          <ShinyText
-            text="The best way to predict the future is not to wait for it to happen,
+            <ShinyText
+              text="The best way to predict the future is not to wait for it to happen,
             but to create it with vision, determination, and action."
-            disabled={false}
-            speed={7}
-            className="text-center md:text-center lg:text-left text-sm md:text-lg text-gray-600 italic mb-12 md:mb-16 px-2"
-          />
+              disabled={false}
+              speed={7}
+              className="text-center md:text-center lg:text-left text-sm md:text-lg text-gray-600 italic mb-12 md:mb-16 px-2"
+            />
+          </div>
         </div>
-      </div>
 
-      <div className="w-full max-w-8xl mx-auto">
-        <div className="p-4 md:p-8">
-          <div className="flex flex-col lg:flex-row gap-10">
-            <div className="flex-1 order-2 lg:order-1">
-              <div data-aos="fade-up" data-aos-delay="100" className="mb-10">
+        <div className="w-full max-w-8xl mx-auto">
+          <div className="p-4 md:p-8">
+            <div className="flex flex-col lg:flex-row gap-10">
+              <div className="flex-1 order-2 lg:order-1">
+                <div data-aos="fade-up" data-aos-delay="100" className="mb-10">
+                  <h3 className="text-xl sm:text-2xl text-black font-bold text-left">
+                    PROJECTS OVERVIEW
+                  </h3>
+
+                  <p className="text-sky-600 font-mono text-xs sm:text-sm mb-4 text-left md:text-left">
+                    FULLSTACK DEVELOPER
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mt-2 mb-6">
+                    <span className="px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm">
+                      MERN STACK
+                    </span>
+                    <span className="px-3 sm:px-4 py-2 bg-green-100 text-green-700 border border-green-400 rounded-full text-xs sm:text-sm ">
+                      FULL STACK
+                    </span>
+                    <span className="px-3 sm:px-4 py-2 bg-purple-100 text-purple-700 border border-purple-400 rounded-full text-xs sm:text-sm ">
+                      RESPONSIVE DESIGN
+                    </span>
+                    <span className="px-3 sm:px-4 py-2 bg-orange-100 text-orange-700 border border-orange-400 rounded-full text-xs sm:text-sm ">
+                      DEPLOYMENT
+                    </span>
+                  </div>
+
+                  <p
+                    data-aos="fade-up"
+                    data-aos-delay="150"
+                    className="text-black/80 text-sm sm:text-base leading-relaxed text-justify"
+                  >
+                    Every project I’ve built reflects not only my passion for
+                    technology and problem-solving, but also my dedication to
+                    learning, experimenting, and improving with each step. From
+                    designing clean and responsive interfaces that enhance user
+                    experience, to implementing secure and optimized backend
+                    systems, I strive to create solutions that are practical,
+                    scalable, and reliable in real-world use cases. I believe
+                    that technology should not only function, but also inspire
+                    confidence and simplicity for the people using it.
+                    <br /> <br />
+                    Below, you’ll find a collection of projects that illustrate
+                    my journey in web development and software engineering. They
+                    highlight my growing expertise with modern tools and
+                    frameworks such as React, Node.js, Express, and MongoDB,
+                    while also demonstrating my adaptability to new challenges.
+                    Each project has been a learning experience teaching me
+                    valuable lessons in clean code practices, debugging,
+                    teamwork, version control, and deployment pipelines.
+                  </p>
+                </div>
+
                 <h3 className="text-xl sm:text-2xl text-black font-bold text-left">
-                  PROJECTS OVERVIEW
+                  TOP PROJECTS
                 </h3>
 
                 <p className="text-sky-600 font-mono text-xs sm:text-sm mb-4 text-left md:text-left">
-                  FULLSTACK DEVELOPER
+                  REACT DEVELOPER
                 </p>
 
-                <div className="flex flex-wrap gap-2 mt-2 mb-6">
-                  <span className="px-3 sm:px-4 py-2 bg-sky-100 text-sky-700 border border-sky-400 rounded-full text-xs sm:text-sm">
-                    MERN STACK
-                  </span>
-                  <span className="px-3 sm:px-4 py-2 bg-green-100 text-green-700 border border-green-400 rounded-full text-xs sm:text-sm ">
-                    FULL STACK
-                  </span>
-                  <span className="px-3 sm:px-4 py-2 bg-purple-100 text-purple-700 border border-purple-400 rounded-full text-xs sm:text-sm ">
-                    RESPONSIVE DESIGN
-                  </span>
-                  <span className="px-3 sm:px-4 py-2 bg-orange-100 text-orange-700 border border-orange-400 rounded-full text-xs sm:text-sm ">
-                    DEPLOYMENT
-                  </span>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  {projects.map((project, index) => (
+                    <ProjectCard key={project.id} index={index} {...project} />
+                  ))}
                 </div>
-
-                <p
-                  data-aos="fade-up"
-                  data-aos-delay="150"
-                  className="text-black/80 text-sm sm:text-base leading-relaxed text-justify"
-                >
-                  Every project I’ve built reflects not only my passion for
-                  technology and problem-solving, but also my dedication to
-                  learning, experimenting, and improving with each step. From
-                  designing clean and responsive interfaces that enhance user
-                  experience, to implementing secure and optimized backend
-                  systems, I strive to create solutions that are practical,
-                  scalable, and reliable in real-world use cases. I believe that
-                  technology should not only function, but also inspire
-                  confidence and simplicity for the people using it.
-                  <br /> <br />
-                  Below, you’ll find a collection of projects that illustrate my
-                  journey in web development and software engineering. They
-                  highlight my growing expertise with modern tools and
-                  frameworks such as React, Node.js, Express, and MongoDB, while
-                  also demonstrating my adaptability to new challenges. Each
-                  project has been a learning experience teaching me valuable
-                  lessons in clean code practices, debugging, teamwork, version
-                  control, and deployment pipelines.
-                </p>
               </div>
 
-              <h3 className="text-xl sm:text-2xl text-black font-bold text-left">
-                TOP PROJECTS
-              </h3>
-
-              <p className="text-sky-600 font-mono text-xs sm:text-sm mb-4 text-left md:text-left">
-                REACT DEVELOPER
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {projects.map((project, index) => (
-                  <ProjectCard key={project.id} index={index} {...project} />
-                ))}
-              </div>
-            </div>
-
-            <div className="hidden lg:block lg:w-1/3 order-1 lg:order-2">
-              <div className="sticky overflow-hidden flex flex-col justify-center items-center top-26 h-[80vh] w-full grid-bg">
-                <Earth />
+              <div className="hidden lg:block lg:w-1/3 order-1 lg:order-2">
+                <div className="sticky overflow-hidden flex flex-col justify-center items-center top-26 h-[80vh] w-full grid-bg">
+                  <Earth />
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <ScrollVelocity
+        texts={[
+          // --- LINE 1 (scrolls left → right) ---
+          <div
+            key="1"
+            className="flex items-center justify-center text-center gap-10 leading-tight"
+          >
+            <span className="flex items-center gap-3 text-green-600 font-bold ml-10">
+              <SiMongodb size={40} /> MongoDB
+            </span>
+            <span className="flex items-center gap-3 text-amber-500 font-bold">
+              <SiExpress size={40} /> Express
+            </span>
+          </div>,
+
+          // --- LINE 2 (scrolls right → left) ---
+          <div
+            key="2"
+            className="flex items-center justify-center gap-10 text-center leading-tight"
+          >
+            <span className="flex items-center gap-3 text-blue-500 font-bold ml-10">
+              <SiReact size={40} /> React
+            </span>
+            <span className="flex items-center gap-3 text-green-600 font-bold">
+              <SiNodedotjs size={40} /> Node.js
+            </span>
+          </div>,
+        ]}
+        velocity={100}
+        className="text-gray-600 bg-white  font-mono text-4xl"
+      />
+    </>
   );
 };
 
