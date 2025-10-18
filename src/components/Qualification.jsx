@@ -9,6 +9,7 @@ import "../index.css";
 import ScratchCard from "./ScratchCard.jsx";
 import CustomCursor from "./CustomCursor.jsx";
 import { Eraser } from "lucide-react";
+import ShinyText from "../../Reactbits/ShinyText/ShinyText.jsx";
 
 const Qualification = () => {
   useEffect(() => {
@@ -26,13 +27,20 @@ const Qualification = () => {
       className="min-h-screen bg-white flex flex-col items-center py-16 px-4 md:px-15"
     >
       {/* Section Title */}
-      <h1
+      {/* <h1
         data-aos="fade-up"
         data-aos-delay="100"
         className="text-center md:text-left text-2xl md:text-4xl font-bold text-gray-800 mb-4"
       >
         About Me & My Qualifications
-      </h1>
+      </h1> */}
+
+      <ShinyText
+        text="About Me & My Qualifications"
+        disabled={false}
+        speed={7}
+        className="text-center md:text-left text-2xl md:text-4xl font-bold text-gray-800 mb-4"
+      />
 
       {/* Subtitle */}
       <p
