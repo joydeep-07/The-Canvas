@@ -5,8 +5,7 @@ const ShinyText = ({ text, disabled = false, speed = 5, className = "" }) => {
     <div
       className={`bg-clip-text text-transparent inline-block ${className}`}
       style={{
-        // Base text is dark gray so it shows on white background
-        backgroundColor: "#1f2937", // dark gray base
+        backgroundColor: "#1f2937",
         backgroundImage:
           "linear-gradient(120deg, #1f2937 40%, rgba(255,255,255,0.6) 50%, #1f2937 60%)",
         backgroundSize: "200% 100%",
