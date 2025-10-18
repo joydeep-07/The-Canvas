@@ -2,7 +2,7 @@ import React from "react";
 import * as Icons from "lucide-react";
 import skills from "../Data/skills.js";
 import { Mail, Phone } from "lucide-react";
-import "../style/About.css"
+import "../style/About.css";
 import {
   FaLinkedin,
   FaGithub,
@@ -24,18 +24,6 @@ const AboutMe = () => {
   return (
     <div id="about" className="px-2 bg-white sm:px-6 md:px-0">
       <div className=" lg:col-span-2">
-        {/* <div class="container">
-          <h1 class="wow-text text-xl sm:text-2xl text-black font-bold tracking-tight md:text-left">
-            MYSELF{" "}
-            <span class="words">
-              <span>JOYDEEP</span>
-              <span>A DEVELOPER</span>
-              <span>A PROGRAMMER</span>
-              <span>A DESIGNER</span>
-            </span>
-          </h1>
-        </div> */}
-
         <h1 className="text-4xl flex font-bold mb-6">
           MYSELF
           <span className="text-amber-500 ml-2">
