@@ -7,6 +7,7 @@ import "../style/Circles.css"
 import Hero from "./Hero.jsx";
 import Earth from "./Earth.jsx";
 import ShinyText from "../../Reactbits/ShinyText/ShinyText.jsx";
+import SpotlightCard from "../../Reactbits/SpotlightCard/SpotlightCard.jsx";
 
 const Projects = () => {
   useEffect(() => {
@@ -19,12 +20,16 @@ const Projects = () => {
   }, []);
 
   const ProjectCard = ({ name, description, technologies, link, index }) => (
-    <div
-      data-aos="fade-up"
-      data-aos-delay={80 + index * 10}
-      className="relative group bg-white border border-gray-300 rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition"
+    <SpotlightCard
+      spotlightSize={300}
+      spotlightOpacity={0.15}
+      gradientColor="rgb(14, 165, 233)" // sky blue
+      lightGradientColor="rgb(99, 102, 241)" // indigo
+      glowEffect={true}
+      animated={true}
+      className="relative group border border-gray-300 rounded-xl overflow-hidden shadow-md transition hover:shadow-md"
     >
-      <div className="absolute inset-0 flex items-center justify-center backdrop-blur-[1.5px] opacity-0 group-hover:opacity-100 transition duration-500 z-10">
+      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500 z-10">
         <a
           href={link}
           target="_blank"
@@ -49,7 +54,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
-    </div>
+    </SpotlightCard>
   );
 
   return (
