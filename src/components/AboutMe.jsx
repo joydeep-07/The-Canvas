@@ -2,7 +2,7 @@ import React from "react";
 import * as Icons from "lucide-react";
 import skills from "../Data/skills.js";
 import { Mail, Phone } from "lucide-react";
-import "../style/About.css";
+// import "../style/About.css";
 import {
   FaLinkedin,
   FaGithub,
