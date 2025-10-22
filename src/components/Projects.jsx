@@ -172,9 +172,9 @@ const Projects = () => {
         </div>
       </div>
 
-      <ScrollVelocity
+      {/* <ScrollVelocity
         texts={[
-          // --- LINE 1 (scrolls left → right) ---
+        
           <div
             key="1"
             className="flex items-center justify-center text-center gap-10 leading-tight"
@@ -187,7 +187,7 @@ const Projects = () => {
             </span>
           </div>,
 
-          // --- LINE 2 (scrolls right → left) ---
+       
           <div
             key="2"
             className="flex items-center justify-center gap-10 text-center leading-tight"
@@ -202,7 +202,7 @@ const Projects = () => {
         ]}
         velocity={100}
         className="text-gray-600 bg-white font-mono text-4xl"
-      />
+      /> */}
     </>
   );
 };
