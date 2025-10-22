@@ -8,6 +8,7 @@ import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import LandingPage from "../components/LandingPage";
 import WhyMe from "../components/WhyMe";
+import Gallery from "../components/Gallery";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -74,7 +75,8 @@ const Home = () => {
       <Qualification />
       {/* <WhyMe /> */}
       <Projects />
-      <Experience />
+      {/* <Experience /> */}
+      <Gallery/>
 
       {/* Scroll to Top Button with Progress Ring */}
       <div
