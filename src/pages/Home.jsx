@@ -76,7 +76,7 @@ const Home = () => {
       {/* <WhyMe /> */}
       <Projects />
       <Experience />
-      <Gallery/>
+      
 
       {/* Scroll to Top Button with Progress Ring */}
       <div
